@@ -2,9 +2,11 @@ from django.contrib import admin
 
 from health_assist.accounts.models import HnfUserModel, EmployeeProfile, InsuredCompanies
 
+
 @admin.register(HnfUserModel)
 class HnfUserModelAdmin(admin.ModelAdmin):
     pass
+
 
 # Register your models here.
 @admin.register(EmployeeProfile)

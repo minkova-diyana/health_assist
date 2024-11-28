@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 from health_assist.accounts.models import InsuredCompanies
 
@@ -24,7 +25,20 @@ class UnderPackages(models.Model):
     name = models.CharField(max_length=100)
     limit = models.CharField(max_length=255, blank=False, null=False)
     coverage = models.TextField(blank=False, null=False)
-    documents_needed = models.ManyToManyField(Documents, null=True, blank=True)
+    documents_needed = models.ManyToManyField(Documents, related_name='documents')
+    slug = models.SlugField(
+        max_length=100,
+        unique=True,
+        editable=False
+    )
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        if not self.slug:
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.name}'
@@ -39,4 +53,5 @@ class CompanyPackages(models.Model):
 
 
 class ReimbursementClaims(models.Model):
+    # claim_to_package = models.ForeignKey(UnderPackages, on_delete=models.CASCADE, related_name='claim_to_package')
     pass

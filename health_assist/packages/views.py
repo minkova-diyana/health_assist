@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from health_assist.accounts.models import EmployeeProfile
 from health_assist.packages.models import CompanyPackages, UnderPackages
@@ -20,3 +20,10 @@ class UserPackage(ListView):
         context['profile'] = profile
         context['global_packages'] = CompanyPackages.objects.filter(company=profile.company)
         return context
+
+
+class UnderCoverage(DetailView):
+    model = UnderPackages
+    template_name = 'accounts/under-coverage.html'
+    context_object_name = 'details'
+

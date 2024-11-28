@@ -11,7 +11,7 @@
     <div>
         <h3>Your insurance package</h3>
         
-        {{ profile.company }} employee's insurance<a href="{% url 'package' %}"><span class="go-to-menu"><i class="bi bi-arrow-bar-right"></i></span></a>
+        <a href="{% url 'package' %}" style="color: #001935;">{{ profile.company }} employee's insurance<span class="go-to-menu" style="padding: 0.5em; font-size: 20px"><i class="bi bi-arrow-bar-right"></i></span></a>
     </div>
     
 {% endblock %}

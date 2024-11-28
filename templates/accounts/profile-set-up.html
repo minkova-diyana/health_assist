@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'health_assist/health-base.html' %}
+{% load static %}
 
-</body>
-</html>
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Welcome, {{ profile.first_name }} {{ profile.last_name }}</h1>
+    <p>You want to make some changes to your profile information?</p>
+    <div class="text-form-container">
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="submit-button">Submit</button>
+             </form>
+        </div>
+    </div>
+{% endblock %}

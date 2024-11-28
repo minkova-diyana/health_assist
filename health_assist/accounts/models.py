@@ -62,7 +62,11 @@ class EmployeeProfile(models.Model):
     company = models.ForeignKey(
         InsuredCompanies,
         on_delete=models.CASCADE
-
+    )
+    phone = models.CharField(
+        max_length=11,
+        null=True,
+        blank=True
     )
 
     def save(self, *args, **kwargs):

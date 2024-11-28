@@ -23,7 +23,7 @@
                 <div class="middle">
                     {% for insurance in insurances %}
                         {% if insurance.type_insurance == 'general' %}
-                            <div class="insurance-container" id="{{ insurance.slug }}">
+                            <div class="insurance-container" id="{{ insurance.slug }}" data-type="g">
                             <h2>
                                 {{ insurance.title }}
                             </h2>
@@ -69,7 +69,7 @@
                 <div class="middle">
                      {% for insurance in insurances %}
                         {% if insurance.type_insurance == 'health' %}
-                            <div class="insurance-container" id="{{ insurance.slug }}">
+                            <div class="insurance-container" id="{{ insurance.slug }}" data-type="h">
                             <h2>
                                 {{ insurance.title }}
                             </h2>

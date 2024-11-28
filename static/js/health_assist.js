@@ -1,7 +1,9 @@
-const hInsuranceMenueElements = document.querySelectorAll('.insurance')
+const hInsuranceMenuElements = document.querySelectorAll('.insurance')
+
 
 function showInfo(event){
-    const allInfoElements = document.querySelectorAll('.sub-container');
+    parent = event.target.closest('.insurance');
+    const allInfoElements = parent.querySelectorAll('.sub-container');
     allInfoElements.forEach(infoElement => {
         infoElement.style.display = 'none';
 
@@ -13,6 +15,7 @@ function showInfo(event){
 
 }
 
-hInsuranceMenueElements.forEach((element) => {
+hInsuranceMenuElements.forEach((element) => {
     element.addEventListener('click', showInfo)
     });
+

@@ -13,8 +13,8 @@
        <div class="sub-container" id="{{ packages.packages.name }}">
             {% for under_package in company_packages %}
                 {% if under_package.packages.name == packages.packages.name %}
-                    <div class="insurance" data-info="{{packages.packages.name}}">
-                        <p>{{ under_package.name }}</p>
+                    <div class="insurance">
+                        <a href="{% url 'under-package' under_package.pk %}"><p>{{ under_package.name }}</p></a>
                      </div>
                 {% endif %}
             {% endfor %}

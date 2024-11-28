@@ -1,5 +1,5 @@
 from django import forms
-from health_assist.web_pages.models import Information, Pages
+from health_assist.web_pages.models import Information
 
 
 class InfoBaseForm(forms.ModelForm):
