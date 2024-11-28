@@ -1,0 +1,57 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTACT FORM -->
+<section class="banner">
+    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
+        alt="Welcome to our Contact Us page">
+    
+    <p>
+      We're here to answer any questions you may have.
+      </p>
+</section>
+
+<!-- Contact form -->
+<section class="contact-form">
+    <div class="form-container">
+        <h2>Your Details</h2> 
+        <form id="contact-form"  action="#">
+            <div class="form-row form-error" style="display:none;"></div>
+            <div class="form-row">
+            <label for="contact-form-name">Name:</label>
+            <input id="contact-form-name" class="form-input" type="text" name="name" required>
+            </div>
+            <div class="form-row">
+            <label for="contact-form-email">Email:</label>
+            <input id="contact-form-email" class="form-input" type="email" name="email" required>
+            </div>
+            <div class="form-row">
+            <label for="contact-form-phone">Phone:</label>
+            <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+            </div>
+            <div class="form-row">
+            <label for="contact-form-message">Message:</label>
+            <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Company contact info -->
+<section class="contact-info">
+    <h2>Contact Information</h2>
+    <address>
+        HealthNet Finance<br>
+        13 Beli Iskar Street<br>
+        Sofia, 1527<br>
+        Phone: <a href="tel:+359892438562">+359892438562</a><br>
+        Email: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
+    </address>
+</section>
+{% endblock %}

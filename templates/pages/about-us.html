@@ -1,0 +1,54 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block header %}
+    <h1>About Us</h1>
+{% endblock %}
+      
+{% block content %}
+    <h3>
+        {{ about_us.title }}
+    </h3>
+        <div class="wrap-container">
+            <div class="colum-left">
+                <div class="info">
+                    <div class="container">
+                        <p>
+                        {{ about_us.content }}
+                       {% if user.is_staff %}
+                            <a href="{% url 'edit-info' about_us.pk %}"><i class="bi bi-pencil-square"  ></i></a>
+                        {% endif %}
+                            {% if about_us.hidden_info %}
+                            <div class="hiden-info">
+                                {{ about_us.hidden_info }}
+                            </div>
+                            <button class="show-more">Show more</button>
+                            <button class="show-less">Show less</button>
+                            </div>
+                        {% endif %}
+                </div>
+            </div>
+            <div class="colum-right">
+                
+                <img 
+                    src="{% static 'css/images/background-buisnes.png.png' %}"
+                    alt="ilustration"
+                    class="wrap-image"
+                />
+            </div>
+        </div>
+
+    <!-- Company contact info -->
+       
+<div class="contact-info">
+    <div id="contact-detiles">
+        <address>
+            HealthNet Finance<br>
+        13 Beli Iskar Street<br>
+        Sofia, 1527<br>
+        Phone: <a href="tel:+359892438562">+359892438562</a><br>
+        Email: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
+        </address>
+    </div>
+</div> 
+{% endblock %}

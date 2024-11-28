@@ -1,0 +1,41 @@
+.form-control{
+    padding: 1.5em;
+    border-radius: 3em;
+    margin: 2em;
+    display: inline-block;
+    width: 80%;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 22%;
+}
+
+form input[type="password"],
+form textarea {
+    width: 50%;
+    text-align: center;
+
+    font-size: 16px;
+    padding: 1em;
+    border-radius: 3em;
+    margin: 3em 22%;
+    display: inline-block;
+
+}
+
+
+.helptext{
+    display: none;
+}

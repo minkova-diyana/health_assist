@@ -1,0 +1,27 @@
+{% extends 'health_assist/health-base.html' %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Health Assist</h1>
+    <h3>
+        Login
+    </h3>
+    
+
+    <div class="text-form-container">
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="submit-button">Submit</button>
+                <p>Don't have an account? <a href="{% url 'register' %}">Signin</a></p>
+             </form>
+        </div>
+    </div>
+    
+    
+
+{% endblock %}

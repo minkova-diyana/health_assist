@@ -1,0 +1,48 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/home-page.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    
+<!--General Insurances -->
+<section class="information">
+    <section class="general-insurances">
+        <h1>General Insurances We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
+        <div class="row">
+            {% for insurance in general %}
+                <div class="insurance-col">
+                    <h3>{{ insurance.title }}</h3>
+                    <p>
+                    <a href="{% url 'insurances'%}"><p>
+                        {{ insurance.content }}
+                    </p></a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+<!-- Health Insurances -->
+    <section class="health-insurances">
+        <h1>Health Insurance We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    
+        <div class="row">
+            {% for insurance in health %}
+                <div class="insurance-col">
+                    <h3>{{ insurance.title }}</h3>
+                    <p>
+                    <a href="{% url 'insurances'%}"><p>
+                        {{ insurance.content }}
+                    </p></a>
+                </div>
+            {% endfor %}
+        
+        </div>
+    </section>
+</section>
+{% endblock %}

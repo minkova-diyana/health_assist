@@ -1,0 +1,32 @@
+{% load static %}
+<nav>
+    <a href="{% url 'home' %}"><img src="{% static 'css/images/Health_Net_Finance.jpeg-removebg.png' %}" alt="logo"></a>
+    
+    <div class="nav-links" id="navLinks">
+        <a href="#"><img src="{% static 'css/images/flags/Bulgaria.png' %}" alt="BG-Flag" class="flag-image"></a>
+        <i class="bi bi-x-square-fill" id="close"></i>
+        <ul>
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about-us' %}">ABOUT</a></li>
+            <li><a href="{% url 'news' %}">NEWS</a></li>
+            <li><a href="{% url 'insurances' %}">INSURANCES</a></li>
+            <li><a href="{% url 'partners' %}">PARTNERS</a></li>
+            <li><a href="{% url 'contacts' %}">CONTACTS</a></li>
+            {% if user.is_staff %}
+                <li class="menu-item">
+                    <a href="{% url 'logout' %}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()" class="menu-link">
+                        <i class="ai-arrow-left-thick"></i>
+                        <span>LOGOUT</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    
+    </div>
+    
+    <i class="bi bi-list" id="menue"></i>
+
+    <form id="logout-form" method="post" action="{% url 'logout' %}" style="display: none;">
+        {% csrf_token %}
+    </form>
+</nav>

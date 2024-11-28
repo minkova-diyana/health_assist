@@ -1,0 +1,13 @@
+{% extends 'health_assist/health-base.html' %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Welcome, to Health Assist!</h1>
+    <p>We hope to make your the proces of using your insurance like a kids game!</p>
+    <p>Don't have an account? <a href="{% url 'register' %}">Signin</a></p>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Net Finance</title>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    {% endblock %}
+<body>
+    <section class="header">
+        {% include 'common/nav.html' %}
+        
+    <div class="text-box">
+    {% block header %}
+        <h1>YOUR INSURANCE BROCKER</h1>
+{#        <p>#}
+{#            We can help you make the right decision in choosing your insurance. <br>Let us assist you with finding the best product for your needs!#}
+{#        </p>#}
+        <p style="margin: 0; padding: 0;">We pried on the quality of service we provide.</p>
+        <p style="margin-top: 0; padding-top: 0">Every day we try to find new and better ways to assist our clients.</p>
+        <a href="{% url 'health-home' %}" class="hero-btn">Health Assist</a>
+        <h3 style="padding: 10px; color: #521b0f;">Our app for you to manage your health insurance</h3>
+    {% endblock %}
+    </div>
+    </section>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+    <!-- Footer section -->
+<footer>
+    <p>
+        © 2024 Diyana Minkova. All rights reserved.
+      </p>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
