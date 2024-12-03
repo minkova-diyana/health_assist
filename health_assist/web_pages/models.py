@@ -15,7 +15,6 @@ class Pages(models.Model):
 
 
 class Information(models.Model):
-
     title = models.CharField(max_length=100)
     content = models.TextField(max_length=500)
     hidden_info = models.TextField(
@@ -38,15 +37,6 @@ class Information(models.Model):
         unique=True,
         editable=False
     )
-    image = models.ImageField(
-        blank=True,
-        null=True,
-        upload_to='images/'
-    )
-    partner_url = models.URLField(
-        blank=True,
-        null=True
-    )
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -58,3 +48,9 @@ class Information(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Partners(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='partners')
+    partner_url = models.URLField()

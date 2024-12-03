@@ -104,3 +104,5 @@ class ProfileChangeForm(forms.ModelForm):
             'last_name': 'Last Name',
             'phone': 'Phone Number',
         }
+
+

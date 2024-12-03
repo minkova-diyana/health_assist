@@ -9,7 +9,7 @@
     <h4>Limits</h4>
     <div class="insurance">
         {{details.limit}}
-    </div> 
+    </div>
     <h4>Coverage</h4>
     <div class="insurance">
         {{details.coverage}}
@@ -17,9 +17,7 @@
         <h4>Documents needed</h4>
         {% for document in details.documents_needed.all %}
              <div class="insurance">
-                {{document}}
+                <a href="{%  url 'upload_document' details.slug document.pk %}" >{{document}}</a>
              </div>
         {% endfor %}
-   
-  
 {% endblock %}

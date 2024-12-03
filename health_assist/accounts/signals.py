@@ -10,7 +10,7 @@ UserModel = get_user_model()
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_profile(sender, instance: UserModel, created: bool, **kwargs):
-    if created:
+    if created and not instance.is_staff:
         profile = EmployeeProfile.objects.get(uc_id_num=instance.uc_id_number)
         profile.user = instance
         profile.save()

@@ -1,7 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
-from health_assist.accounts.models import InsuredCompanies
+from health_assist.accounts.models import InsuredCompanies, HnfUserModel
+from health_assist.packages.path_creation import user_directory_path
 
 
 # Create your models here.
@@ -53,5 +54,8 @@ class CompanyPackages(models.Model):
 
 
 class ReimbursementClaims(models.Model):
-    # claim_to_package = models.ForeignKey(UnderPackages, on_delete=models.CASCADE, related_name='claim_to_package')
-    pass
+    document = models.ForeignKey(Documents, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
+    under_package = models.ForeignKey(UnderPackages, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
+    user = models.ForeignKey(HnfUserModel, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
+    file = models.FileField(upload_to=user_directory_path)
+    uploaded_at = models.DateTimeField(auto_now_add=True)

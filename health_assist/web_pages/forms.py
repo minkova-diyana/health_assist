@@ -1,5 +1,5 @@
 from django import forms
-from health_assist.web_pages.models import Information
+from health_assist.web_pages.models import Information, Partners
 
 
 class InfoBaseForm(forms.ModelForm):
@@ -21,4 +21,18 @@ class InfoAddForm(InfoBaseForm):
 
 
 class InfoEditForm(InfoBaseForm):
+    pass
+
+
+class PartnersBaseForm(forms.ModelForm):
+    class Meta:
+        model = Partners
+        fields = '__all__'
+
+
+class PartnersAddForm(PartnersBaseForm):
+    pass
+
+
+class PartnersEditForm(PartnersBaseForm):
     pass
