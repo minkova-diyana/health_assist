@@ -5,17 +5,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+    <h3>Required {{ document.type_document }}:</h3>
     
-<h3>Required {{ document.type_document }}:</h3>
-<h4></h4>
-        <div class="insurance">
+    <div class="insurance">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
                 <button type="submit" class="submit-button">Submit</button>
         </form>
-        </div>
-    
-    
-  
+    </div>
 {% endblock %}

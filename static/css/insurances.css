@@ -115,7 +115,9 @@
     border-width: 0.2em;
     border-style:solid;
     border-radius: 3em;
-
+}
+.insurance a{
+    color: #001935;
 }
 .insurance:hover{
     border: 1px solid;
