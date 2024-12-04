@@ -1,0 +1,24 @@
+@import "mystyle.css";
+
+body{
+    background-image: url(images/doctor-using-modern-computer.jpg);
+}
+h1{
+    color: #521b0f;
+    font-size: 50px;
+}
+.home{
+    padding-top: 8%;
+}
+
+.reg-btn{
+    border-radius: 2em;
+    text-align: center;
+    border: solid;
+    padding: 10px;
+    margin: 20px;
+}
+
+h4{
+    padding: 5px;
+}

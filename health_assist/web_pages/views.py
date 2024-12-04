@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
 
-from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm
+from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm, PartnersEditForm
 from health_assist.web_pages.models import Information, Partners
 
 
@@ -40,18 +40,6 @@ class InsuranceDetailView(ListView):
         return context
 
 
-class PartnersDetailView(ListView):
-    model = Partners
-    template_name = 'pages/partners.html'
-    context_object_name = 'partner'
-
-
-class PartnerAddView(CreateView):
-    model = Partners
-    form_class = PartnersAddForm
-    template_name = 'common/add-partner.html'
-    success_url = reverse_lazy('partners')
-
 def contacts(request):
     return render(request, 'pages/contacts.html')
 
@@ -81,4 +69,31 @@ class PageInfoEditView(UpdateView):
 def delete_info(request, pk):
     news = Information.objects.get(pk=pk)
     news.delete()
+    return redirect(request.META.get('HTTP_REFERER'))
+
+
+class PartnersDetailView(ListView):
+    model = Partners
+    template_name = 'pages/partners.html'
+    context_object_name = 'partner'
+
+
+class PartnerAddView(CreateView):
+    model = Partners
+    form_class = PartnersAddForm
+    template_name = 'common/add-partner.html'
+    success_url = reverse_lazy('partners')
+
+
+class PartnerEditView(UpdateView):
+    model = Partners
+    form_class = PartnersEditForm
+    template_name = 'common/edit-partner.html'
+    context_object_name = 'partner'
+    success_url = reverse_lazy('partners')
+
+
+def delete_partner(request, pk):
+    partner = Partners.objects.get(pk=pk)
+    partner.delete()
     return redirect(request.META.get('HTTP_REFERER'))

@@ -49,40 +49,6 @@ class EmployeeRegistrationForm(UserCreationForm):
         return user
 
 
-# class ProfileChangeForm(UserChangeForm):
-#     first_name = forms.CharField(max_length=50)
-#     last_name = forms.CharField(max_length=100)
-#     phone = forms.ImageField(
-#         max_length=11,
-#         null=True,
-#         blank=True
-#     )
-#
-#     class Meta(UserChangeForm.Meta):
-#         model = get_user_model()
-#         fields = ['email', 'first_name', 'last_name', 'phone']
-#
-#     def __init__(self, *args, **kwargs):
-#         user = kwargs.pop('instance', None)
-#
-#         super().__init__(*args, **kwargs)
-#         if user and hasattr(user, 'employee_profile'):
-#             self.fields['first_name'].initial = user.employee_profile.first_name
-#             self.fields['last_name'].initial = user.employee_profile.last_name
-#             self.fields['phone'].initial = user.employee_profile.phone
-#
-#     def save(self, commit=True):
-#         user = super().save(commit=False)
-#         profile = user.employee_profile
-#         profile.first_name = self.cleaned_data.get('first_name')
-#         profile.last_name = self.cleaned_data.get('last_name')
-#         profile.phone = self.cleaned_data.get('phone')
-#         if commit:
-#             user.save()
-#             profile.save()
-#
-#         return user
-
 class EmployeeUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
@@ -104,5 +70,3 @@ class ProfileChangeForm(forms.ModelForm):
             'last_name': 'Last Name',
             'phone': 'Phone Number',
         }
-
-

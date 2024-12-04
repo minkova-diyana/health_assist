@@ -4,7 +4,7 @@ from django.urls import path, include
 
 
 from health_assist.web_pages.views import AboutUsDetailView, PageInfoEditView, NewsDetailView, PageInfoAddView, \
-    InsuranceDetailView, delete_info, contacts, PartnersDetailView, PartnerAddView
+    InsuranceDetailView, delete_info, contacts, PartnersDetailView, PartnerAddView, PartnerEditView, delete_partner
 
 urlpatterns = [
     path('about/', AboutUsDetailView.as_view(), name='about-us'),
@@ -17,5 +17,9 @@ urlpatterns = [
     path('<int:pk>/', include([
         path('edit/', PageInfoEditView.as_view(), name='edit-info'),
         path('delete/', delete_info, name='delete-info'),
+    ])),
+    path('partner/<int:pk>', include([
+        path('edit/', PartnerEditView.as_view(), name='edit-partner'),
+        path('delete/', delete_partner, name='delete-partner'),
     ])),
 ]

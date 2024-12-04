@@ -1,4 +1,20 @@
-.partners{
+.partners image{
     width: 100%;
     border-radius: 2em;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.insurance-col{
+    flex-basis: 31%;
+    background: #cbf6ff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
 }

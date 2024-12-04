@@ -29,7 +29,8 @@ a{
     align-items: flex-start;
     margin: 3em auto;
     box-sizing: border-box;
-    /*border-width: 2px;*/
+    text-align: center;
+    padding: 10px;
     border-style: solid;
     width: 50%;
 }
@@ -84,5 +85,9 @@ a{
 @media screen and (max-width: 768px) {
     .wrap-container {
         grid-template-columns: 10fr;
+    }
+    .text-form-container{
+        display: flex;
+        border: double;
     }
 }

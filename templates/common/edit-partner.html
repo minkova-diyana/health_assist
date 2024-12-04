@@ -2,18 +2,15 @@
 {% load static %}
 
 {% block header %}
-            <h1>{{ object.pages.name }}</h1>
+            <h1>Partners</h1>
 {% endblock %}
 
 {% block content %}
-    <h3>
-        Always be the first to know
-    </h3>
     
     <section class="wrapper">
             <div class="text-form-container">
                 <div class="container">
-                    <form action="{% url 'edit-info' info.pk %}" method="post">
+                    <form action="{% url 'edit-partner' partner.pk %}" method="post">
                         {{ form.as_p }}
                         {% csrf_token %}
                         <button type="submit" class="submit-button">Submit</button>

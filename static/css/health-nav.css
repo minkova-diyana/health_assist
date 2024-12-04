@@ -1,5 +1,6 @@
 *, *:after, *:before {
   box-sizing: border-box;
+
 }
 .bi-arrow-bar-right{
    width: 100%;
@@ -10,7 +11,7 @@ ul.menu {
   font-weight: 300;
   font-style: normal;
   left: 30px;
-  top: 20%;
+  top: 40%;
   list-style: none;
   margin: 0;
   width: 70px;
