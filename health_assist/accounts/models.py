@@ -42,10 +42,15 @@ class HnfUserModel(AbstractBaseUser, PermissionsMixin):
 
     date_joined = models.DateTimeField(_("date joined"), default=timezone.now)
 
-    uc_id_number = models.TextField(unique=True)
+    uc_id_number = models.TextField(unique=True, blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     USERNAME_REQUIRED_FIELDS = ['uc_id_number']
+
+    def save(self, *args, **kwargs):
+        if not self.uc_id_number and not self.is_staff:
+            raise ValueError('Must have UCN')
+        super().save(*args, **kwargs)
 
 
 class EmployeeProfile(models.Model):

@@ -10,11 +10,11 @@
 }
 
 .insurance-col{
-    flex-basis: 31%;
-    background: #cbf6ff;
+    flex-basis: 20%;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+    border: solid 1px #cbf6ff;
 }

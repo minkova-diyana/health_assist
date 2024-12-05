@@ -16,15 +16,6 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('health-home')
 
 
-# class ProfileUpdateView(LoginRequiredMixin, UpdateView):
-#     model = get_user_model()
-#     form_class = ProfileChangeForm
-#     template_name = 'accounts/profile-set-up.html'
-#     success_url = reverse_lazy('health-home')
-#
-#     def get_object(self, queryset=None):
-#         return self.request.user
-
 class ProfileDetailsView(LoginRequiredMixin, DetailView):
     model = EmployeeProfile
     template_name = 'accounts/profile-details.html'
@@ -39,8 +30,9 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = EmployeeProfile
     form_class = ProfileChangeForm
     template_name = 'accounts/profile-set-up.html'
-    success_url = reverse_lazy('health-home')
+    success_url = reverse_lazy('profile')
 
     def get_object(self, queryset=None):
         profile = EmployeeProfile.objects.get(user=self.request.user)
         return profile
+
