@@ -5,23 +5,35 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+    <div class="p-3">
+    <h1 style="color: #001935">My profile</h1>
+    </div>
     <div class="text-form-container">
-        <h1>Welcome, {{ profile.first_name }}</h1>
-        <h3>Profile Details</h3>
+        <h3 class="p-3">
+            Profile Details 
+            <a href="{% url 'profile-edit' request.user.pk %}">
+                <i class="bi bi-pencil-square"  ></i>
+            </a>
+        </h3>
         <p>First name : {{ profile.first_name }}</p>
         <p>Last name : {{ profile.last_name }}</p>
-        <p>Email : {{ profile.user.email }}</p>
         <p>
             Phone number : 
             {% if profile.phone %}
                 {{ profile.phone }}
             {% endif %}
         </p>
-        <p>
-            You want to make some changes to your profile information?
-            <a href="{% url 'profile-edit' request.user.pk %}">
+        <h3 class="p-3">
+            Change Credentials
+            <a href="{% url 'email-edit' request.user.pk %}">
                 <i class="bi bi-pencil-square"  ></i>
             </a>
+        </h3>
+        <p>
+            Email : {{ profile.user.email }}
+        </p>
+        <p>
+            Password : *******
         </p>
     </div>
 {% endblock %}

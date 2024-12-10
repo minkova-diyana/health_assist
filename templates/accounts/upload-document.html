@@ -5,7 +5,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h3>Required {{ document.type_document }}:</h3>
+    <h3>Required</h3>
+    <h4 class="popup">{{ document.type_document }}:</h4>
     
     <div class="insurance">
         <form method="post" enctype="multipart/form-data">

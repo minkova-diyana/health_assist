@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.core.exceptions import ValidationError
 
 from health_assist.accounts.models import EmployeeProfile
@@ -52,7 +52,19 @@ class EmployeeRegistrationForm(UserCreationForm):
 class EmployeeUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
-        fields = ('email',)
+        fields = ['email']
+
+        widgets = {
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+
+class EmployeePasswordChangeForm(PasswordChangeForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['old_password'].widget.attrs.update({'class': 'form-control'})
+        self.fields['new_password1'].widget.attrs.update({'class': 'form-control'})
+        self.fields['new_password2'].widget.attrs.update({'class': 'form-control'})
 
 
 class ProfileChangeForm(forms.ModelForm):

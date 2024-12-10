@@ -4,7 +4,6 @@
     width: 70%;
     margin: 10px;
 }
-
 form label {
     display: block;
     font-weight: bold;
@@ -36,8 +35,6 @@ form textarea {
     display: inline-block;
 
 }
-
-
 .helptext{
     display: none;
 }

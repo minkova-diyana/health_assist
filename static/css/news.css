@@ -27,7 +27,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: auto;
+    margin: 1em auto;
     box-sizing: border-box;
     text-align: center;
     padding: 10px;
