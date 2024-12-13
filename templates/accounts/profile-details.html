@@ -34,6 +34,9 @@
         </p>
         <p>
             Password : *******
+             <a href="{% url 'password' request.user.pk %}">
+                <i class="bi bi-pencil-square"  ></i>
+            </a>
         </p>
     </div>
 {% endblock %}

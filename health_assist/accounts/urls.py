@@ -13,7 +13,7 @@ urlpatterns = [
         path('<int:pk>/', include([
             path('', ProfileUpdateView.as_view(), name='profile-edit'),
             path('email/', update_email, name='email-edit'),
-        path('password/', UpdatePasswordView.as_view(), name='password'),
+            path('password/', UpdatePasswordView.as_view(), name='password'),
         ])),
     ]))
 ]
