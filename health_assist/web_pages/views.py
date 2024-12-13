@@ -106,5 +106,6 @@ def contacts(request):
             sender=ContactForm,
             **form.cleaned_data
         )
+        return redirect('contacts')
     context = {'form': form}
     return render(request, 'pages/contacts.html', context)
