@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
+from decouple import config
 from django.urls import reverse_lazy
 from dotenv import load_dotenv
 import environ
@@ -42,6 +43,9 @@ MY_APPS = [
 ]
 
 INSTALLED_APPS = [
+                     "unfold",  # before django.contrib.admin
+                     "unfold.contrib.filters",  # optional, if special filters are needed
+                     "unfold.contrib.forms",  # optional, if special form elements are needed
                      'django.contrib.admin',
                      'django.contrib.auth',
                      'django.contrib.contenttypes',
@@ -146,3 +150,12 @@ AUTH_USER_MODEL = 'accounts.HnfUserModel'
 
 LOGIN_REDIRECT_URL = reverse_lazy('health-home')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('EMAIL_HOST', config('EMAIL_HOST'))
+EMAIL_PORT = os.getenv('EMAIL_PORT', config('EMAIL_PORT'))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', config('EMAIL_USE_TLS')) == "True"
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', config('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', config('EMAIL_HOST_PASSWORD'))

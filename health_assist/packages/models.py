@@ -3,6 +3,7 @@ from django.template.defaultfilters import slugify
 
 from health_assist.accounts.models import InsuredCompanies, HnfUserModel
 from health_assist.packages.path_creation import user_directory_path
+from health_assist.packages.validators import FileSizeValidator
 
 
 # Create your models here.
@@ -57,5 +58,5 @@ class ReimbursementClaims(models.Model):
     document = models.ForeignKey(Documents, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
     under_package = models.ForeignKey(UnderPackages, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
     user = models.ForeignKey(HnfUserModel, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
-    file = models.FileField(upload_to=user_directory_path)
+    file = models.FileField(upload_to=user_directory_path, validators=[FileSizeValidator(max_size_mb=5)])
     uploaded_at = models.DateTimeField(auto_now_add=True)

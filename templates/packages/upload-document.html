@@ -1,0 +1,23 @@
+{% extends 'health_assist/health-base.html' %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h3>Required</h3>
+    <h4 class="popup">{{ document.type_document }}:</h4>
+    
+    <div class="insurance">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if form.file.errors %}
+                <div class="error">
+                    {{ form.file.errors }}
+                </div>
+            {% endif %}
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+{% endblock %}

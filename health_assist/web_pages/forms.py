@@ -36,3 +36,28 @@ class PartnersAddForm(PartnersBaseForm):
 
 class PartnersEditForm(PartnersBaseForm):
     pass
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(
+        max_length=100,
+        required=True,
+        label='Your Name',
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+    )
+    email = forms.EmailField(
+        required=True,
+        label='Your Email',
+        widget=forms.EmailInput(attrs={'class': 'form-control'}),
+    )
+    subject = forms.CharField(
+        max_length=300,
+        required=True,
+        label='Subject',
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+    )
+    message = forms.CharField(
+        required=True,
+        label='Message',
+        widget=forms.Textarea(attrs={'class': 'form-control'}),
+    )

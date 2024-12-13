@@ -1,0 +1,25 @@
+{% extends 'health_assist/health-base.html' %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1 class="p-5">{{ details.name}}</h1>
+    <h4>Limits</h4>
+    <div class="insurance">
+        {{details.limit}}
+    </div> 
+    <h4>Coverage</h4>
+    <div class="insurance">
+        {{details.coverage}}
+    </div>
+        <h4>Documents needed</h4>
+        {% for document in details.documents_needed.all %}
+             <div class="insurance">
+                {{document}}
+             </div>
+        {% endfor %}
+   
+  
+{% endblock %}

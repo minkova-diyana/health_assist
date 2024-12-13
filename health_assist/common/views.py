@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import TemplateView
 
 from health_assist.accounts.models import EmployeeProfile
+from health_assist.web_pages.forms import ContactForm
 from health_assist.web_pages.models import Information
+from health_assist.web_pages.signals import contact_form_submitted
 
 
 # Create your views here.
@@ -35,3 +37,15 @@ class HealthHomeView(TemplateView):
             profile = get_object_or_404(EmployeeProfile, user=self.request.user)
             context['profile'] = profile
             return context
+
+
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        contact_form_submitted.send(
+            sender=ContactForm,
+            **form.cleaned_data
+        )
+        return redirect('contact')
+    context = {'form': form}
+    return render(request, 'health_assist/health-contact.html', context)

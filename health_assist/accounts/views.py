@@ -1,4 +1,4 @@
-from django.contrib.auth import get_user_model, update_session_auth_hash
+from django.contrib.auth import get_user_model, update_session_auth_hash, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView
@@ -62,6 +62,7 @@ def update_email(request, pk):
             'user_form': user_form,
         }
         return render(request, 'accounts/email-update.html', context)
+
 
 class UpdatePasswordView(PasswordChangeView):
     form_class = EmployeePasswordChangeForm

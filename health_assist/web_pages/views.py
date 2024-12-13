@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
 
-from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm, PartnersEditForm
+from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm, PartnersEditForm, ContactForm
 from health_assist.web_pages.models import Information, Partners
+from health_assist.web_pages.signals import contact_form_submitted
 
 
 # Create your views here.
@@ -40,8 +41,7 @@ class InsuranceDetailView(ListView):
         return context
 
 
-def contacts(request):
-    return render(request, 'pages/contacts.html')
+
 
 
 class PageInfoAddView(CreateView):
@@ -97,3 +97,14 @@ def delete_partner(request, pk):
     partner = Partners.objects.get(pk=pk)
     partner.delete()
     return redirect(request.META.get('HTTP_REFERER'))
+
+
+def contacts(request):
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        contact_form_submitted.send(
+            sender=ContactForm,
+            **form.cleaned_data
+        )
+    context = {'form': form}
+    return render(request, 'pages/contacts.html', context)

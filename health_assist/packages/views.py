@@ -10,7 +10,7 @@ from health_assist.packages.models import CompanyPackages, UnderPackages, Reimbu
 
 class UserPackage(ListView):
     model = UnderPackages
-    template_name = 'accounts/account-insurance-package.html'
+    template_name = 'packages/account-insurance-package.html'
     context_object_name = 'company_packages'
 
     def get_queryset(self):
@@ -28,14 +28,14 @@ class UserPackage(ListView):
 
 class UnderCoverage(DetailView):
     model = UnderPackages
-    template_name = 'accounts/under-coverage.html'
+    template_name = 'packages/under-coverage.html'
     context_object_name = 'details'
 
 
 class UploadFilesView(LoginRequiredMixin, CreateView):
     model = ReimbursementClaims
     form_class = UploadFiles
-    template_name = 'accounts/upload-document.html'
+    template_name = 'packages/upload-document.html'
 
     def get_context_data(self, **kwargs):
         under_package_slug = self.kwargs['under_package_slug']
