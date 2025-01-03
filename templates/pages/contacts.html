@@ -1,6 +1,6 @@
 {% extends 'common/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block header %}
 {% endblock %}
 
@@ -12,7 +12,7 @@
         alt="Welcome to our Contact Us page">
     
     <p>
-      We're here to answer any questions you may have.
+      {%  trans "We're here to answer any questions you may have" %}.
       </p>
 </section>
 
@@ -30,13 +30,13 @@
 
 <!-- Company contact info -->
 <section class="contact-info">
-    <h2>Contact Information</h2>
+    <h2>{% trans 'Contact Information' %}</h2>
     <address>
-        HealthNet Finance<br>
-        13 Beli Iskar Street<br>
-        Sofia, 1527<br>
-        Phone: <a href="tel:+359892438562">+359892438562</a><br>
-        Email: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
-    </address>
+            HealthNet Finance<br>
+        {% trans '13 Beli Iskar Street' %}<br>
+        {% trans 'Sofia' %}, 1527<br>
+        {% trans 'Phone' %}: <a href="tel:+359892438562">+359892438562</a><br>
+        {% trans 'Email' %}: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
+        </address>
 </section>
 {% endblock %}

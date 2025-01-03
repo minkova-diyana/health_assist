@@ -58,5 +58,5 @@ class ReimbursementClaims(models.Model):
     document = models.ForeignKey(Documents, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
     under_package = models.ForeignKey(UnderPackages, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
     user = models.ForeignKey(HnfUserModel, on_delete=models.CASCADE, related_name='uploaded_documents', default=0)
-    file = models.FileField(upload_to=user_directory_path, validators=[FileSizeValidator(max_size_mb=5)])
+    file = models.FileField(upload_to=user_directory_path, validators=[FileSizeValidator(max_size_mb=1)])
     uploaded_at = models.DateTimeField(auto_now_add=True)

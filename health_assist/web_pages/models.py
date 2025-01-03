@@ -1,9 +1,6 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
 from django.template.defaultfilters import slugify
-
+from django.utils.translation import gettext_lazy as _
 from health_assist.web_pages.choices import TypeInsurance
 
 
@@ -15,7 +12,7 @@ class Pages(models.Model):
 
 
 class Information(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, verbose_name=_("Title"))
     content = models.TextField(max_length=500)
     hidden_info = models.TextField(
         blank=True,

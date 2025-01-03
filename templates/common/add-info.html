@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{% extends 'common/base.html' %}
+    {% load i18n %}
 {% load static %}
 
 {% block header %}
-            <h1>Add information</h1>
+            <h1>{% trans 'Add information' %}</h1>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +17,7 @@
                     <form action="{% url 'add-info' %}" method="post">
                         {{ form.as_p }}
                         {% csrf_token %}
-                        <button type="submit" class="submit-button">Submit</button>
+                        <button type="submit" class="submit-button">{% trans 'Submit' %}</button>
                     </form>
                 </div>
             </div>

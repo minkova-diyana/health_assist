@@ -1,8 +1,8 @@
 {% extends 'common/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block header %}
-    <h1>About Us</h1>
+<h1>{% trans "About Us" %}</h1>
 {% endblock %}
       
 {% block content %}
@@ -22,8 +22,8 @@
                             <div class="hiden-info">
                                 {{ about_us.hidden_info }}
                             </div>
-                            <button class="show-more">Show more</button>
-                            <button class="show-less">Show less</button>
+                            <button class="show-more">{% trans 'Show more' %}</button>
+                            <button class="show-less">{% trans 'Show less' %}</button>
                             </div>
                         {% endif %}
                 </div>
@@ -44,10 +44,10 @@
     <div id="contact-detiles">
         <address>
             HealthNet Finance<br>
-        13 Beli Iskar Street<br>
-        Sofia, 1527<br>
-        Phone: <a href="tel:+359892438562">+359892438562</a><br>
-        Email: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
+        {% trans '13 Beli Iskar Street' %}<br>
+        {% trans 'Sofia' %}, 1527<br>
+        {% trans 'Phone' %}: <a href="tel:+359892438562">+359892438562</a><br>
+        {% trans 'Email' %}: <a href="mailto:sofia@hnfbg.com">sofia@hnfbg.com</a>
         </address>
     </div>
 </div> 

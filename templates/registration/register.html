@@ -1,13 +1,13 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
     <h1>Health Assist</h1>
     <h3>
-        Signin
+        {% trans 'Signin' %}
     </h3>
     
     <div class="text-form-container">
@@ -15,8 +15,8 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form }}
-                <button type="submit" class="submit-button">Submit</button>
-                <p>You have an account? <a href="{% url 'login' %}">Login</a></p>
+                <button type="submit" class="submit-button">{% trans 'Submit' %}</button>
+                <p>{% trans 'You have an account' %}? <a href="{% url 'login' %}">{% trans 'Login' %}</a></p>
             </form>
     
         </div>

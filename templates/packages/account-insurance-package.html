@@ -1,11 +1,11 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1 class="p-5">Welcome, to Health Assist!</h1>
+    <h1 class="p-5">{% trans 'Welcome, to' %} Health Assist!</h1>
     {% for packages in global_packages %}
         <div class="insurance" data-info="{{packages.packages.name}}">
             {{ packages.packages.name}}

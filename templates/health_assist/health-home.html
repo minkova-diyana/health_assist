@@ -1,15 +1,15 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1>Welcome, to Health Assist!</h1>
-    <h4 class="home">We hope to make the proces of using your insurance easy like a child's play!</h4>
+    <h1>{% trans 'Welcome, to' %} Health Assist!</h1>
+    <h4 class="home">{% trans "We hope to make the proces of using your insurance easy like a child's play" %}!</h4>
     <h4>Don't have an account? </h4>
-        <a href="{% url 'register' %}" class="reg-btn">Signin</a>
+        <a href="{% url 'register' %}" class="reg-btn">{% trans 'Signin' %}</a>
     <h4>Already have an account? </h4>
-        <a href="{% url 'login' %}" class="reg-btn">Login</a>
+        <a href="{% url 'login' %}" class="reg-btn">{% trans 'Login' %}</a>
 
 {% endblock %}

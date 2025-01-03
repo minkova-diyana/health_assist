@@ -1,39 +1,39 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
     <div class="p-3">
-    <h1 style="color: #001935">My profile</h1>
+    <h1 style="color: #001935">{% trans 'My profile' %}</h1>
     </div>
     <div class="text-form-container">
         <h3 class="p-3">
-            Profile Details 
+            {% trans 'Profile Details'%} 
             <a href="{% url 'profile-edit' request.user.pk %}">
                 <i class="bi bi-pencil-square"  ></i>
             </a>
         </h3>
-        <p>First name : {{ profile.first_name }}</p>
-        <p>Last name : {{ profile.last_name }}</p>
+        <p>{% trans 'First name' %} : {{ profile.first_name }}</p>
+        <p>{% trans 'Last name' %} : {{ profile.last_name }}</p>
         <p>
-            Phone number : 
+            {% trans 'Phone number' %} : 
             {% if profile.phone %}
                 {{ profile.phone }}
             {% endif %}
         </p>
         <h3 class="p-3">
-            Change Credentials
+            {% trans 'Change Credentials' %}
             <a href="{% url 'email-edit' request.user.pk %}">
                 <i class="bi bi-pencil-square"  ></i>
             </a>
         </h3>
         <p>
-            Email : {{ profile.user.email }}
+            {% trans 'Email' %} : {{ profile.user.email }}
         </p>
         <p>
-            Password : *******
+            {% trans 'Password' %} : *******
              <a href="{% url 'password' request.user.pk %}">
                 <i class="bi bi-pencil-square"  ></i>
             </a>

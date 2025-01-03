@@ -1,17 +1,17 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1 class="p-4" style="color: #001935">Welcome, {{ profile.first_name }} {{ profile.last_name }}!</h1>
-    <h4>Company: {{ profile.company }}</h4>
-    <h4>Health Insurance company: {{ profile.company.insurance_company_name }}</h4>
+    <h1 class="p-4" style="color: #001935">{% trans 'Welcome' %}, {{ profile.first_name }} {{ profile.last_name }}!</h1>
+    <h4>{% trans 'Company' %}: {{ profile.company }}</h4>
+    <h4>{% trans 'Health Insurance company' %}: {{ profile.company.insurance_company_name }}</h4>
     <div class="p-3">
-        <h3>Your insurance package</h3>
+        <h3>{% trans 'Your insurance package' %}</h3>
         
-        <a href="{% url 'package' %}" style="color: #001935;">{{ profile.company }} employee's insurance<span class="go-to-menu" style="padding: 0.5em; font-size: 20px"><i class="bi bi-arrow-bar-right"></i></span></a>
+        <a href="{% url 'package' %}" style="color: #001935;">{{ profile.company }} {% trans "employee's insurance" %}<span class="go-to-menu" style="padding: 0.5em; font-size: 20px"><i class="bi bi-arrow-bar-right"></i></span></a>
     </div>
     
 {% endblock %}

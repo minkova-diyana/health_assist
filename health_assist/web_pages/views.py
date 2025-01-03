@@ -41,9 +41,6 @@ class InsuranceDetailView(ListView):
         return context
 
 
-
-
-
 class PageInfoAddView(CreateView):
     model = Information
     form_class = InfoAddForm

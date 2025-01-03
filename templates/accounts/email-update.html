@@ -1,18 +1,18 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h3 class="p-5">Change your credentials</h3>
+    <h3 class="p-5">{% trans 'Change your credentials' %}</h3>
     <div class="text-form-container">
         <div class="container">
             <form method="post">
                 {% csrf_token %}
-                <h4 class="p-3">Email update</h4>
+                <h4 class="p-3">{% trans 'Email update' %}</h4>
                 {{user_form}}
-                <button type="submit" class="submit-button">Submit</button>
+                <button type="submit" class="submit-button">{% trans 'Submit' %}</button>
              </form>
         </div>
     </div>

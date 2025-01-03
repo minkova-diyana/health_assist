@@ -1,11 +1,11 @@
 {% extends 'health_assist/health-base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h3>Required</h3>
+    <h3>{%  trans 'Required' %}</h3>
     <h4 class="popup">{{ document.type_document }}:</h4>
     
     <div class="insurance">
@@ -17,7 +17,7 @@
                     {{ form.file.errors }}
                 </div>
             {% endif %}
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-button">{% trans 'Submit' %}</button>
         </form>
     </div>
 {% endblock %}

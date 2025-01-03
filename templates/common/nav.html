@@ -1,21 +1,38 @@
 {% load static %}
+{% load i18n %}
 <nav>
     <a href="{% url 'home' %}"><img src="{% static 'css/images/Health_Net_Finance.jpeg-removebg.png' %}" alt="logo"></a>
     
     <div class="nav-links" id="navLinks">
-        <a href="#"><img src="{% static 'css/images/flags/Bulgaria.png' %}" alt="BG-Flag" class="flag-image"></a>
+        {% if request.LANGUAGE_CODE == 'en' %}
+        <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="bg">
+            <button type="submit" style="background:none; border:none; padding:0;">
+                <img src="{% static 'css/images/flags/Bulgaria.png' %}" alt="BG-Flag" class="flag-image">
+            </button>
+        </form>
+    {% elif request.LANGUAGE_CODE == 'bg' %}
+        <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="en">
+            <button type="submit" style="background:none; border:none; padding:0;">
+                <img src="{% static 'css/images/flags/United-Kingdom.png' %}" alt="EN-Flag" class="flag-image">
+            </button>
+        </form>
+    {% endif %}
         <i class="bi bi-x-square-fill" id="close"></i>
         <ul>
-            <li><a href="{% url 'home' %}">HOME</a></li>
-            <li><a href="{% url 'about-us' %}">ABOUT</a></li>
-            <li><a href="{% url 'news' %}">NEWS</a></li>
-            <li><a href="{% url 'insurances' %}">INSURANCES</a></li>
-            <li><a href="{% url 'partners' %}">PARTNERS</a></li>
-            <li><a href="{% url 'contacts' %}">CONTACTS</a></li>
+            <li><a href="{% url 'home' %}">{% trans 'HOME'%}</a></li>
+            <li><a href="{% url 'about-us' %}">{% trans 'ABOUT' %}</a></li>
+            <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+            <li><a href="{% url 'insurances' %}">{% trans 'INSURANCES' %}</a></li>
+            <li><a href="{% url 'partners' %}">{% trans 'PARTNERS' %}</a></li>
+            <li><a href="{% url 'contacts' %}">{% trans 'CONTACTS' %}</a></li>
             {% if user.is_staff %}
                 <li class="menu-item">
                     <a href="{% url 'logout' %}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()" class="menu-link">
-                        <span>LOGOUT</span>
+                        <span>{% trans 'LOGOUT' %}</span>
                     </a>
                 </li>
             {% endif %}

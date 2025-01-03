@@ -1,6 +1,6 @@
 {% extends 'common/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'css/home-page.css' %}">
 {% endblock %}
@@ -11,8 +11,8 @@
 <!--General Insurances -->
 <section class="information">
     <section class="general-insurances">
-        <h1>General Insurances We Offer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h1>{% trans 'General Insurances We Offer' %}</h1>
+        <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
         
         <div class="row">
             {% for insurance in general %}
@@ -28,8 +28,8 @@
     </section>
 <!-- Health Insurances -->
     <section class="health-insurances">
-        <h1>Health Insurance We Offer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h1>{% trans 'Health Insurance We Offer' %}</h1>
+        <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
     
         <div class="row">
             {% for insurance in health %}

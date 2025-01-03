@@ -1,13 +1,13 @@
 {% extends 'common/base.html' %}
 {% load static %}
-
+{%  load i18n %}
 {% block header %}
             <h1>{{ object.pages.name }}</h1>
 {% endblock %}
 
 {% block content %}
     <h3>
-        Always be the first to know
+        {% trans 'Always be the first to know' %}
     </h3>
     
     <section class="wrapper">
@@ -16,7 +16,7 @@
                     <form action="{% url 'edit-info' info.pk %}" method="post">
                         {{ form.as_p }}
                         {% csrf_token %}
-                        <button type="submit" class="submit-button">Submit</button>
+                        <button type="submit" class="submit-button">{% trans 'Submit' %}</button>
                     </form>
                 </div>
             </div>

@@ -1,14 +1,14 @@
 {% extends 'common/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'css/home-page.css' %}">
 {% endblock %}
 
 {% block header %}
-            <h1>Oops!</h1>
-            <h2> Something went wrong!</h2>
-            <p>Please go back to home page!</p>
+            <h1>{% trans 'Oops' %}!</h1>
+            <h2> {% trans 'Something went wrong' %}!</h2>
+            <p>{% trans 'Please go back to home page' %}!</p>
 {% endblock %}
 {% block content %}
    
