@@ -13,6 +13,11 @@
     pip install requirements.txt
     
 ## 3. Set up the Settings
+
+https://docs.google.com/document/d/1Jr2khaOL8tz8cjao-7DqTmIGjNuVozkhLbF1Go7TsSk/edit?usp=sharing
+
+only for the exam
+
 . SECRET_KEY = 'django-insecure-generate-your-secret_key'
 
     DATABASES = {
@@ -49,5 +54,5 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', config('EMAIL_HOST_PASSWO
     
 
 ### If you want to register and login as a health assist user you need the uc_id_number of existing employee profile 
-. get to the accounts migration 0013 adn choose one of the two 
+. get to the accounts migration 0013 and choose one of the two 
 
