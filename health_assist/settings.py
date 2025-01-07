@@ -18,6 +18,9 @@ from django.urls import reverse_lazy
 from dotenv import load_dotenv
 import environ
 from django.utils.translation import gettext_lazy as _
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 load_dotenv()
 
@@ -58,6 +61,8 @@ INSTALLED_APPS = [
                      'crispy_bootstrap4',
                      'rosetta',
                      'parler',
+                     'cloudinary',
+                     'cloudinary_storage',
 
                  ] + MY_APPS
 
@@ -161,7 +166,6 @@ PARLER_LANGUAGES = {
 }
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -179,3 +183,9 @@ EMAIL_PORT = os.getenv('EMAIL_PORT', config('EMAIL_PORT'))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', config('EMAIL_USE_TLS')) == "True"
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', config('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', config('EMAIL_HOST_PASSWORD'))
+
+cloudinary.config(
+    cloud_name=os.getenv('CLOUD_NAME', config('CLOUD_NAME')),
+    api_key=os.getenv('API_KEY', config('API_KEY')),
+    api_secret=os.getenv('API_SECRET', config('API_SECRET')),
+)

@@ -5,6 +5,16 @@
 .bi-arrow-bar-right{
    width: 100%;
 }
+
+.flag-image {
+    height: 24px;
+    width: 24px;
+
+    cursor: pointer;
+    margin-left: auto;
+    align-self: center;
+}
+
 ul.menu {
   position: fixed;
   font-family: "Roboto", sans-serif;

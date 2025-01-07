@@ -10,4 +10,4 @@ def user_directory_path(instance, filename):
     company_name = profile.company
     user_name = f'{profile.first_name}_{profile.last_name}'
     date = datetime.now().strftime("%Y_%m_%d_%H")
-    return os.path.join('uploaded_files', company_name.name, user_name, date, filename)
+    return f"reimbursement_files/{company_name}/{user_name}/{date}/{filename}"
