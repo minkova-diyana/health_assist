@@ -1,7 +1,10 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils.translation import gettext_lazy as _
+from parler.utils.context import switch_language
+
 from health_assist.web_pages.choices import TypeInsurance
+from parler.models import TranslatableModel, TranslatedFields
 
 
 class Pages(models.Model):
@@ -11,13 +14,17 @@ class Pages(models.Model):
         return self.name
 
 
-class Information(models.Model):
-    title = models.CharField(max_length=100, verbose_name=_("Title"))
-    content = models.TextField(max_length=500)
-    hidden_info = models.TextField(
-        blank=True,
-        null=True
+class Information(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(max_length=100, verbose_name=_("Title")),
+        content=models.TextField(max_length=500, verbose_name=_("Content")),
+        hidden_info=models.TextField(
+            blank=True,
+            null=True,
+            verbose_name=_("Hidden information"),
+        )
     )
+
     created_at = models.DateTimeField(auto_now_add=True)
     pages = models.ForeignKey(
         Pages,
@@ -39,12 +46,10 @@ class Information(models.Model):
         super().save(*args, **kwargs)
 
         if not self.slug:
-            self.slug = slugify(self.title)
+            title_translation = self.get_translation('en')
+            self.slug = slugify(title_translation.title)
 
         super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.title
 
 
 class Partners(models.Model):

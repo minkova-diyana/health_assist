@@ -4,31 +4,40 @@ from django.template.defaultfilters import slugify
 
 from health_assist.accounts.models import InsuredCompanies, HnfUserModel
 from health_assist.packages.path_creation import user_directory_path
-from health_assist.packages.validators import FileSizeValidator
+from parler.models import TranslatableModel, TranslatedFields
 from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
-class Documents(models.Model):
-    type_document = models.CharField(max_length=100)
+class Documents(TranslatableModel):
+    translations = TranslatedFields(
+        type_document=models.CharField(max_length=100)
+    )
+
+    # def __str__(self):
+    #     name_translation = self.get_translation('en')
+    #     return f'{name_translation.name}'
+
+
+class Packages(TranslatableModel):
+    translations = TranslatedFields(
+        name=models.CharField(max_length=100)
+    )
 
     def __str__(self):
-        return self.type_document
+        name_translation = self.get_translation('en')
+        return f'{name_translation.name}'
 
 
-class Packages(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-
-class UnderPackages(models.Model):
+class UnderPackages(TranslatableModel):
+    translations = TranslatedFields(
+        name=models.CharField(max_length=100),
+        limit=models.CharField(max_length=255, blank=False, null=False),
+        coverage=models.TextField(blank=False, null=False),
+    )
     packages = models.ForeignKey(Packages, on_delete=models.CASCADE, related_name='under_packages')
     company = models.ForeignKey(InsuredCompanies, on_delete=models.CASCADE, related_name='under_company')
-    name = models.CharField(max_length=100)
-    limit = models.CharField(max_length=255, blank=False, null=False)
-    coverage = models.TextField(blank=False, null=False)
+
     documents_needed = models.ManyToManyField(Documents, related_name='documents')
     slug = models.SlugField(
         max_length=100,
@@ -40,12 +49,13 @@ class UnderPackages(models.Model):
         super().save(*args, **kwargs)
 
         if not self.slug:
-            self.slug = slugify(self.name)
-
+            name_translation = self.get_translation('en')
+            self.slug = slugify(name_translation.name)
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'{self.name}'
+        name_translation = self.get_translation('en')
+        return f'{name_translation.name}'
 
 
 class CompanyPackages(models.Model):
@@ -53,7 +63,7 @@ class CompanyPackages(models.Model):
     packages = models.ForeignKey(Packages, on_delete=models.CASCADE, related_name='company_under_packages')
 
     def __str__(self):
-        return f'{self.company.name} - {self.packages.name}'
+        return f'{self.company.name} - '
 
 
 class ReimbursementClaims(models.Model):

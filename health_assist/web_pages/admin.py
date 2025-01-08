@@ -1,4 +1,5 @@
 from django.contrib import admin
+from parler.admin import TranslatableAdmin
 
 from health_assist.web_pages.models import Pages, Information
 
@@ -10,5 +11,5 @@ class PagesAdmin(admin.ModelAdmin):
 
 
 @admin.register(Information)
-class InformationAdmin(admin.ModelAdmin):
+class InformationAdmin(TranslatableAdmin):
     readonly_fields = ('slug',)

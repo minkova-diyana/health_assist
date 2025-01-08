@@ -1,18 +1,24 @@
 from django.contrib import admin
+from parler.admin import TranslatableAdmin
 
 from health_assist.packages.models import CompanyPackages, UnderPackages, Packages, Documents
 
 
 @admin.register(Documents)
-class DocumentsAdmin(admin.ModelAdmin):
+class DocumentsAdmin(TranslatableAdmin):
     pass
 
+
 @admin.register(Packages)
-class PackagesAdmin(admin.ModelAdmin):
+class PackagesAdmin(TranslatableAdmin):
     pass
+
+
 @admin.register(UnderPackages)
-class UnderPackagesAdmin(admin.ModelAdmin):
+class UnderPackagesAdmin(TranslatableAdmin):
     pass
+
+
 @admin.register(CompanyPackages)
 class CompanyPackagesAdmin(admin.ModelAdmin):
     pass

@@ -1,8 +1,9 @@
 from django import forms
 from health_assist.web_pages.models import Information, Partners
+from parler.forms import TranslatableModelForm
+from django.utils.translation import gettext_lazy as _
 
-
-class InfoBaseForm(forms.ModelForm):
+class InfoBaseForm(TranslatableModelForm):
     class Meta:
         model = Information
         exclude = ['slug']
@@ -42,22 +43,22 @@ class ContactForm(forms.Form):
     name = forms.CharField(
         max_length=100,
         required=True,
-        label='Your Name',
+        label=_('Your Name'),
         widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     email = forms.EmailField(
         required=True,
-        label='Your Email',
+        label=_('Your Email'),
         widget=forms.EmailInput(attrs={'class': 'form-control'}),
     )
     subject = forms.CharField(
         max_length=300,
         required=True,
-        label='Subject',
+        label=_('Subject'),
         widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     message = forms.CharField(
         required=True,
-        label='Message',
+        label=_('Message'),
         widget=forms.Textarea(attrs={'class': 'form-control'}),
     )

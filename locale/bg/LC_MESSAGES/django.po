@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-03 15:10+0200\n"
-"PO-Revision-Date: 2025-01-03 15:11+0000\n"
+"POT-Creation-Date: 2025-01-08 11:48+0200\n"
+"PO-Revision-Date: 2025-01-08 11:51+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -62,17 +62,42 @@ msgstr ""
 msgid "date joined"
 msgstr ""
 
-#: .\health_assist\settings.py:130
+#: .\health_assist\settings.py:135
 msgid "English"
 msgstr "Английски"
 
-#: .\health_assist\settings.py:131
+#: .\health_assist\settings.py:136
 msgid "Bulgarian"
 msgstr "Български"
 
-#: .\health_assist\web_pages\models.py:15
+#: .\health_assist\web_pages\forms.py:46
+msgid "Your Name"
+msgstr "Твоето Име"
+
+#: .\health_assist\web_pages\forms.py:51
+#| msgid "Email"
+msgid "Your Email"
+msgstr "Имейл"
+
+#: .\health_assist\web_pages\forms.py:57
+msgid "Subject"
+msgstr "Тема на имейла"
+
+#: .\health_assist\web_pages\forms.py:62
+msgid "Message"
+msgstr "Съобщение"
+
+#: .\health_assist\web_pages\models.py:19
 msgid "Title"
 msgstr "Заглавие"
+
+#: .\health_assist\web_pages\models.py:20
+msgid "Content"
+msgstr "Увод"
+
+#: .\health_assist\web_pages\models.py:24
+msgid "Hidden information"
+msgstr "Повече информация"
 
 #: .\templates\404.html:9
 msgid "Oops"
@@ -261,37 +286,33 @@ msgid "Signin"
 msgstr "Регистрация"
 
 #: .\templates\health_assist\health-home.html:13
-#: .\templates\health_assist\health-nav.html:27
+#: .\templates\health_assist\health-nav.html:28
 #: .\templates\registration\login.html:10
 #: .\templates\registration\register.html:19
 msgid "Login"
 msgstr "Вход"
 
-#: .\templates\health_assist\health-nav.html:6
+#: .\templates\health_assist\health-nav.html:7
 msgid "Home"
 msgstr "Начало"
 
-#: .\templates\health_assist\health-nav.html:13
+#: .\templates\health_assist\health-nav.html:14
 msgid "Insurance Package"
 msgstr "Застрахователен Пакет"
 
-#: .\templates\health_assist\health-nav.html:19
+#: .\templates\health_assist\health-nav.html:20
 msgid "Reimbursement claim"
 msgstr "Възстановяване на разходи"
 
-#: .\templates\health_assist\health-nav.html:34
+#: .\templates\health_assist\health-nav.html:35
 msgid "Logout"
 msgstr "Изход"
 
-#: .\templates\health_assist\health-nav.html:42
+#: .\templates\health_assist\health-nav.html:43
 msgid "Profile"
 msgstr "Профил"
 
-#: .\templates\health_assist\health-nav.html:50
-msgid "Change Language"
-msgstr "Смени Езика"
-
-#: .\templates\health_assist\health-nav.html:57
+#: .\templates\health_assist\health-nav.html:71
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -414,3 +435,6 @@ msgstr "Нямаш акаунт"
 #: .\templates\registration\register.html:19
 msgid "You have an account"
 msgstr "Имаш акаунт"
+
+#~ msgid "Change Language"
+#~ msgstr "Смени Езика"
