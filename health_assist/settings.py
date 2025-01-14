@@ -34,9 +34,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '13.61.176.222']
 
 # Application definition
 MY_APPS = [
@@ -63,6 +63,7 @@ INSTALLED_APPS = [
                      'parler',
                      'cloudinary',
                      'cloudinary_storage',
+                     'storages',
 
                  ] + MY_APPS
 
@@ -190,3 +191,19 @@ cloudinary.config(
     api_key=os.getenv('API_KEY', config('API_KEY')),
     api_secret=os.getenv('API_SECRET', config('API_SECRET')),
 )
+
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+
+AWS_STORAGE_BUCKET_NAME = 'hnf-bkt'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
+
+STORAGES = {
+    'default': {
+        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
+    },
+    'staticfiles': {
+        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
+    },
+}
