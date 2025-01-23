@@ -211,3 +211,28 @@ summary i {
     transform: scale(1);
   }
 }
+
+@media(max-width:900px) {
+
+  ul.menu {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  left: 30px;
+  top: 30%;
+  list-style: none;
+  margin: 0;
+  width: fit-content;
+  margin-right: auto;
+  background-color: rgba(204, 204, 204, 0);
+  display: ruby-base-container;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px 0 rgba(5, 4, 62, 0.25);
+  z-index: 10000;
+}
+
+}

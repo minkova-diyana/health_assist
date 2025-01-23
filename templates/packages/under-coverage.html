@@ -17,7 +17,7 @@
         <h4>{% trans 'Documents needed' %}</h4>
         {% for document in details.documents_needed.all %}
              <div class="insurance">
-                <a href="{%  url 'upload_document' details.slug document.pk %}" >{{document}}</a>
+                <a href="{%  url 'upload_document' details.slug document.pk %}" >{{document.type_document}}</a>
              </div>
         {% endfor %}
 {% endblock %}
