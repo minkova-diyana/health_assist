@@ -1,7 +1,7 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
 
-from health_assist.web_pages.models import Pages, Information
+from health_assist.web_pages.models import Pages, Information, Partners
 
 
 # Register your models here.
@@ -13,3 +13,8 @@ class PagesAdmin(admin.ModelAdmin):
 @admin.register(Information)
 class InformationAdmin(TranslatableAdmin):
     readonly_fields = ('slug',)
+
+
+@admin.register(Partners)
+class PartnersAdmin(admin.ModelAdmin):
+    pass

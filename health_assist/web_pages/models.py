@@ -51,8 +51,15 @@ class Information(TranslatableModel):
 
         super().save(*args, **kwargs)
 
+    def __str__(self):
+        name_translation = self.get_translation('en')
+        return f'{name_translation.title}'
+
 
 class Partners(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='partners')
     partner_url = models.URLField()
+
+    def __str__(self):
+        return self.name
