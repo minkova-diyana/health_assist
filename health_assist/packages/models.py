@@ -14,9 +14,9 @@ class Documents(TranslatableModel):
         type_document=models.CharField(max_length=100)
     )
 
-    # def __str__(self):
-    #     name_translation = self.get_translation('en')
-    #     return f'{name_translation.name}'
+    def __str__(self):
+        name_translation = self.get_translation('en')
+        return f'{name_translation.name}'
 
 
 class Packages(TranslatableModel):
