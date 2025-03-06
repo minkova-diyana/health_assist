@@ -16,7 +16,7 @@ class Documents(TranslatableModel):
 
     def __str__(self):
         name_translation = self.get_translation('en')
-        return f'{name_translation.name}'
+        return f'{name_translation.type_document}'
 
 
 class Packages(TranslatableModel):

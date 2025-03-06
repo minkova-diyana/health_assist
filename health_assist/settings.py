@@ -98,11 +98,11 @@ environ.Env.read_env()
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("NAME"),
-        "USER": os.getenv("USER"),
-        "PASSWORD": os.getenv("PASSWORD"),
-        "HOST": os.getenv("HOST"),
-        "PORT": os.getenv("PORT"),
+        "NAME": os.getenv('NAME', config('NAME')),
+        "USER": os.getenv("USER", config('USER')),
+        "PASSWORD": os.getenv("PASSWORD", config('PASSWORD')),
+        "HOST": os.getenv("HOST", config('HOST')),
+        "PORT": os.getenv("PORT", config('PORT')),
     }
 }
 # Password validation
