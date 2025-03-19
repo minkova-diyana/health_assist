@@ -8,11 +8,11 @@
     <h1 class="p-5">{{ details.name}}</h1>
     <h4>{% trans 'Limits' %}</h4>
     <div class="insurance">
-        {{details.limit}}
+        {{details.limit|linebreaks}}
     </div> 
     <h4>{% trans 'Coverage' %}</h4>
     <div class="insurance">
-        {{details.coverage}}
+        {{details.coverage|linebreaks}}
     </div>
         <h4>{% trans 'Documents neededDocuments needed' %}</h4>
         {% for document in details.documents_needed.all %}

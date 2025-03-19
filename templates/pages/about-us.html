@@ -14,13 +14,13 @@
                 <div class="info">
                     <div class="container">
                         <p>
-                        {{ about_us.content }}
+                        {{ about_us.content|linebreaks }}
                        {% if user.is_staff %}
                             <a href="{% url 'edit-info' about_us.pk %}"><i class="bi bi-pencil-square"  ></i></a>
                         {% endif %}
                             {% if about_us.hidden_info %}
                             <div class="hiden-info">
-                                {{ about_us.hidden_info }}
+                                {{ about_us.hidden_info|linebreaks }}
                             </div>
                             <button class="show-more">{% trans 'Show more' %}</button>
                             <button class="show-less">{% trans 'Show less' %}</button>

@@ -24,12 +24,12 @@
             <div class="container">
                 <h2>{{ n.title }}</h2>
                 <p>
-                    {{ n.content }}
+                    {{ n.content|linebreaks }}
                     {% if user.is_staff %}
                         <a href="{% url 'edit-info' n.pk %}"><i class="bi bi-pencil-square"  ></i></a>
                         <a href="{% url 'delete-info' n.pk %}"><i class="bi bi-trash3"></i></a> 
                      {% endif %}
-                    {% if n.hidden_info %}
+                    {% if n.hidden_info|linebreaks %}
                     <samp class="hiden-info">{{ n.hidden_info }}</samp>
                     <button class="show-more">{% trans 'Show More' %}</button>
                     <button class="show-less">{% trans 'Show Less' %}</button>
