@@ -1,0 +1,26 @@
+{% load static %}
+{% load i18n %}
+<nav class="footer">
+    <div class="left">
+        <div class="foot-links" id="navLinks">
+            <ul>
+                <li><a href="{% url 'home' %}" class="foot">{% trans 'GTPR'%}</a></li>
+                <li><a href="{% url 'about-us' %}" class="foot">{% trans 'Cookies' %}</a></li>
+                <li><a href="{% url 'insurances' %}" class="foot">{% trans 'SITE POLICY' %}</a></li>
+            </ul>
+        </div>
+    </div>    
+    
+    <div class="middle">
+        <p> © 2024 Diyana Minkova. All rights reserved. </p>
+    </div>
+    
+    <div class="right">
+        <div class="foot-links" id="navLinks">
+            <ul>
+                <li><a href="{% url 'partners' %}" class="foot">{% trans 'EURO' %}</a></li>
+                <li><a href="{% url 'contacts' %}" class="foot">{% trans 'Money laundering' %}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

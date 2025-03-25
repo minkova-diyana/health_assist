@@ -9,16 +9,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-25 13:04+0200\n"
-"PO-Revision-Date: 2025-03-25 13:06+0000\n"
-"Last-Translator: Anonymous User <admin@admin.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.10.1\n"
-
 #: .\health_assist\accounts\admin.py:14
 msgid "Permissions"
 msgstr ""
@@ -64,169 +62,166 @@ msgstr ""
 
 #: .\health_assist\settings.py:132
 msgid "English"
-msgstr "Английски"
+msgstr ""
 
 #: .\health_assist\settings.py:133
 msgid "Bulgarian"
-msgstr "Български"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:46
 msgid "Your Name"
-msgstr "Твоето Име"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:51
 msgid "Your Email"
-msgstr "Имейл"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:57
 msgid "Subject"
-msgstr "Тема на имейла"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:62
 msgid "Message"
-msgstr "Съобщение"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:19
 msgid "Title"
-msgstr "Заглавие"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:20
 msgid "Content"
-msgstr "Увод"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:24
 msgid "Hidden information"
-msgstr "Повече информация"
+msgstr ""
 
 #: .\templates\404.html:9
 msgid "Oops"
-msgstr "Опа"
+msgstr ""
 
 #: .\templates\404.html:10
 msgid "Something went wrong"
-msgstr "Нещо не е както трябва"
+msgstr ""
 
 #: .\templates\404.html:11
 msgid "Please go back to home page"
-msgstr "Моля върнете се на началната страница"
+msgstr ""
 
 #: .\templates\accounts\email-update.html:8
 msgid "Change your credentials"
-msgstr "Промени акаунт за вход"
+msgstr ""
 
 #: .\templates\accounts\email-update.html:13
 msgid "Email update"
-msgstr "Обнови Имейл"
+msgstr ""
 
 #: .\templates\accounts\email-update.html:15
 #: .\templates\accounts\password-update.html:15
 #: .\templates\accounts\profile-set-up.html:15
 #: .\templates\common\add-info.html:20 .\templates\common\add-partner.html:16
-#: .\templates\common\edit-info.html:19
-#: .\templates\common\edit-partner.html:16
+#: .\templates\common\edit-info.html:19 .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
 #: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
 #: .\templates\registration\register.html:18
 msgid "Submit"
-msgstr "Изпрати"
+msgstr ""
 
 #: .\templates\accounts\home-login.html:8
 #: .\templates\accounts\password-update.html:8
 msgid "Welcome"
-msgstr "Добре дошли"
+msgstr ""
 
 #: .\templates\accounts\home-login.html:9
 msgid "Company"
-msgstr "Компания"
+msgstr ""
 
 #: .\templates\accounts\home-login.html:10
 msgid "Health Insurance company"
-msgstr "Застрахователна компания"
+msgstr ""
 
 #: .\templates\accounts\home-login.html:12
 msgid "Your insurance package"
-msgstr "Застрахователен Пакет"
+msgstr ""
 
 #: .\templates\accounts\home-login.html:14
 msgid "employee's insurance"
-msgstr "застрахователна полица за служител"
+msgstr ""
 
 #: .\templates\accounts\password-update.html:9
 msgid "You want to make some changes to your profile information?"
-msgstr "Искаш да направиш промени по твоя профил?"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:9
 msgid "My profile"
-msgstr "Профил"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:13
 msgid "Profile Details"
-msgstr "Профил Детайли"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:18
 msgid "First name"
-msgstr "Първо име"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:19
 msgid "Last name"
-msgstr "Фамилно име"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:21
 msgid "Phone number"
-msgstr "Телефонен номер"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:27
 msgid "Change Credentials"
-msgstr "Промени акаунт информация"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:33
 #: .\templates\pages\about-us.html:50 .\templates\pages\contacts.html:39
 msgid "Email"
-msgstr "Имейл"
+msgstr ""
 
 #: .\templates\accounts\profile-details.html:36
 msgid "Password"
-msgstr "Парола"
+msgstr ""
 
 #: .\templates\accounts\profile-set-up.html:8
 msgid "Change your profile information"
-msgstr "Промени твоята профил информация"
+msgstr ""
 
 #: .\templates\common\add-info.html:10
 msgid "Add information"
-msgstr "Добави информация"
+msgstr ""
 
-#: .\templates\common\add-partner.html:5
-#: .\templates\common\edit-partner.html:5 .\templates\pages\partners.html:5
+#: .\templates\common\add-partner.html:5 .\templates\common\edit-partner.html:5
+#: .\templates\pages\partners.html:5
 msgid "Partners"
-msgstr "Партньори"
+msgstr ""
 
 #: .\templates\common\base.html:18
 msgid "YOUR INSURANCE BROCKER"
-msgstr "ТВОЯ ЗАСТРАХОВАТЕЛЕН БРОКЕР"
+msgstr ""
 
 #: .\templates\common\base.html:20
 msgid "We pried on the quality of service we provide."
-msgstr "Качеството на обслужване е най-важно за нас."
+msgstr ""
 
 #: .\templates\common\base.html:21
 msgid "Every day we try to find new and better ways to assist our clients."
 msgstr ""
-"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на"
-" нашите клиенти."
 
 #: .\templates\common\base.html:27
 msgid "Our app for you to manage your health insurance"
-msgstr "Влез в нашето приложение за здравно застраховани клиенти"
+msgstr ""
 
 #: .\templates\common\edit-info.html:10 .\templates\pages\news.html:10
 msgid "Always be the first to know"
-msgstr "Винаги бъди първия информиран"
+msgstr ""
 
 #: .\templates\common\footer-nav.html:7
 msgid "GTPR"
-msgstr "Защита на данни"
+msgstr ""
 
 #: .\templates\common\footer-nav.html:8
 msgid "Cookies"
@@ -234,226 +229,219 @@ msgstr ""
 
 #: .\templates\common\footer-nav.html:9
 msgid "SITE POLICY"
-msgstr "Политика на сайта"
+msgstr ""
 
 #: .\templates\common\footer-nav.html:21
 msgid "EURO"
-msgstr "ЕВРО"
+msgstr ""
 
 #: .\templates\common\footer-nav.html:22
 msgid "Money laundering"
-msgstr "Пране на пари"
+msgstr ""
 
 #: .\templates\common\index.html:14
 msgid "General Insurances We Offer"
-msgstr "Общо Застраховане"
+msgstr ""
 
 #: .\templates\common\index.html:15 .\templates\common\index.html:32
 msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 msgstr ""
-"Получава лиценз № 63 за извършване на застрахователна дейност като "
-"Застрахователен брокер."
 
 #: .\templates\common\index.html:31
 msgid "Health Insurance We Offer"
-msgstr "Здравно Застраховане"
+msgstr ""
 
 #: .\templates\common\nav.html:26
 msgid "HOME"
-msgstr "НАЧАЛО"
+msgstr ""
 
 #: .\templates\common\nav.html:27
 msgid "ABOUT"
-msgstr "ЗА НАС"
+msgstr ""
 
 #: .\templates\common\nav.html:28
 msgid "NEWS"
-msgstr "НОВИНИ"
+msgstr ""
 
 #: .\templates\common\nav.html:29
 msgid "INSURANCES"
-msgstr "ЗАСТРАХОВКИ"
+msgstr ""
 
 #: .\templates\common\nav.html:30
 msgid "PARTNERS"
-msgstr "ПАРТНЬОРИ"
+msgstr ""
 
 #: .\templates\common\nav.html:31
 msgid "CONTACTS"
-msgstr "КОНТАКТИ"
+msgstr ""
 
 #: .\templates\common\nav.html:35
 msgid "LOGOUT"
-msgstr "ИЗХОД"
+msgstr ""
 
 #: .\templates\health_assist\health-home.html:8
 #: .\templates\packages\account-insurance-package.html:8
 msgid "Welcome, to"
-msgstr "Добре дошли в"
+msgstr ""
 
 #: .\templates\health_assist\health-home.html:9
 msgid ""
 "We hope to make the proces of using your insurance easy like a child's play"
 msgstr ""
-"Надяваме се да направим използването на вашата здравна застраховка лесна "
-"като детска игра"
 
 #: .\templates\health_assist\health-home.html:11
 #: .\templates\registration\login.html:19
 #: .\templates\registration\register.html:10
 msgid "Signin"
-msgstr "Регистрация"
+msgstr ""
 
 #: .\templates\health_assist\health-home.html:13
 #: .\templates\health_assist\health-nav.html:28
 #: .\templates\registration\login.html:10
 #: .\templates\registration\register.html:19
 msgid "Login"
-msgstr "Вход"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:7
 msgid "Home"
-msgstr "Начало"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:14
 msgid "Insurance Package"
-msgstr "Застрахователен Пакет"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:20
 msgid "Reimbursement claim"
-msgstr "Възстановяване на разходи"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:35
 msgid "Logout"
-msgstr "Изход"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:43
 msgid "Profile"
-msgstr "Профил"
+msgstr ""
 
 #: .\templates\health_assist\health-nav.html:71
 msgid "Contacts"
-msgstr "Контакти"
+msgstr ""
 
 #: .\templates\packages\reimbursment_clame.html:9
 #: .\templates\packages\under-coverage.html:9
 msgid "Limits"
-msgstr "Лимити"
+msgstr ""
 
 #: .\templates\packages\reimbursment_clame.html:13
 #: .\templates\packages\under-coverage.html:13
 msgid "Coverage"
-msgstr "Покритие"
+msgstr ""
 
 #: .\templates\packages\reimbursment_clame.html:17
 msgid "Documents neededDocuments needed"
-msgstr "Нужни документи за възстановяване на разходи"
+msgstr ""
 
 #: .\templates\packages\under-coverage.html:17
 msgid "Documents needed"
-msgstr "Нужни Документи"
+msgstr ""
 
 #: .\templates\packages\upload-document.html:8
 msgid "Required"
-msgstr "Изисква се"
+msgstr ""
 
 #: .\templates\pages\about-us.html:5
 msgid "About Us"
-msgstr "За Нас"
+msgstr ""
 
 #: .\templates\pages\about-us.html:25
 msgid "Show more"
-msgstr "Покажи повече"
+msgstr ""
 
 #: .\templates\pages\about-us.html:26
 msgid "Show less"
-msgstr "Покажи по-малко"
+msgstr ""
 
 #: .\templates\pages\about-us.html:47 .\templates\pages\contacts.html:36
 msgid "13 Beli Iskar Street"
-msgstr "ул. Бели Искър 13"
+msgstr ""
 
 #: .\templates\pages\about-us.html:48 .\templates\pages\contacts.html:37
 msgid "Sofia"
-msgstr "София"
+msgstr ""
 
 #: .\templates\pages\about-us.html:49 .\templates\pages\contacts.html:38
 msgid "Phone"
-msgstr "Телефон"
+msgstr ""
 
 #: .\templates\pages\contacts.html:15
 msgid "We're here to answer any questions you may have"
-msgstr "На ваше разположение сме да отговорим на всичките ви въпроси"
+msgstr ""
 
 #: .\templates\pages\contacts.html:33
 msgid "Contact Information"
-msgstr "Контакти"
+msgstr ""
 
 #: .\templates\pages\insurances.html:5
 msgid "Insurances"
-msgstr "Застраховки"
+msgstr ""
 
 #: .\templates\pages\insurances.html:12
 msgid "Add Insurance"
-msgstr "Добави застраховка"
+msgstr ""
 
 #: .\templates\pages\insurances.html:24
 msgid "General Insurances"
-msgstr "Общо Застраховане"
+msgstr ""
 
 #: .\templates\pages\insurances.html:41 .\templates\pages\insurances.html:87
 #: .\templates\pages\news.html:34
 msgid "Show More"
-msgstr "Покажи повече"
+msgstr ""
 
 #: .\templates\pages\insurances.html:42 .\templates\pages\insurances.html:88
 #: .\templates\pages\news.html:35
 msgid "Show Less"
-msgstr "Покажи по-малко"
+msgstr ""
 
 #: .\templates\pages\insurances.html:49
 msgid "Has no General Insurance Info"
-msgstr "Няма добавена информация за общо застраховане"
+msgstr ""
 
 #: .\templates\pages\insurances.html:70
 msgid "Health Insurances"
-msgstr "Здравно Застраховане"
+msgstr ""
 
 #: .\templates\pages\insurances.html:95
 msgid "Has no Health Insurance Info"
-msgstr "Няма добавена информация за здравно застраховане"
+msgstr ""
 
 #: .\templates\pages\news.html:5
 msgid "News"
-msgstr "Новини"
+msgstr ""
 
 #: .\templates\pages\news.html:14
 msgid "Add News"
-msgstr "Добави новина"
+msgstr ""
 
 #: .\templates\pages\news.html:41
 msgid "We have no news for the moment"
-msgstr "Нямаме новини в момента"
+msgstr ""
 
 #: .\templates\pages\partners.html:10
 msgid "Our trusted partners"
-msgstr "Нашите лоялни партньори"
+msgstr ""
 
 #: .\templates\pages\partners.html:14
 msgid "Add Partners"
-msgstr "Добави партньори"
+msgstr ""
 
 #: .\templates\pages\partners.html:39
 msgid "We have no partners for the moment"
-msgstr "Няма добавени партньори в момента"
+msgstr ""
 
 #: .\templates\registration\login.html:19
 msgid "Don't have an account"
-msgstr "Нямаш акаунт"
+msgstr ""
 
 #: .\templates\registration\register.html:19
 msgid "You have an account"
-msgstr "Имаш акаунт"
-
-#~ msgid "Change Language"
-#~ msgstr "Смени Езика"
+msgstr ""

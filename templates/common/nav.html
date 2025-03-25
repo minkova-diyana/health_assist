@@ -12,7 +12,7 @@
                 <img src="{% static 'css/images/flags/Bulgaria.png' %}" alt="BG-Flag" class="flag-image">
             </button>
         </form>
-    {% elif request.LANGUAGE_CODE == 'bg' %}
+        {% elif request.LANGUAGE_CODE == 'bg' %}
         <form action="{% url 'set_language' %}" method="post" style="display:inline;">
             {% csrf_token %}
             <input type="hidden" name="language" value="en">
@@ -20,7 +20,7 @@
                 <img src="{% static 'css/images/flags/United-Kingdom.png' %}" alt="EN-Flag" class="flag-image">
             </button>
         </form>
-    {% endif %}
+        {% endif %}
         <i class="bi bi-x-square-fill" id="close"></i>
         <ul>
             <li><a href="{% url 'home' %}">{% trans 'HOME'%}</a></li>
