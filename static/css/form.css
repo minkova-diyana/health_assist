@@ -2,6 +2,7 @@
     border-radius: 3em;
     width: 70%;
     margin: auto;
+    padding: 1em;
 }
 form label {
     display: block;
@@ -23,9 +24,34 @@ form textarea {
     display: inline-block;
 }
 
+form input[type="email"],
+form textarea{
+    width: 100%;
+    text-align: center;
+
+    font-size: 16px;
+    padding: 1em;
+    border-radius: 3em;
+    margin: 10px;
+    display: inline-block;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    text-align: center;
+
+    font-size: 16px;
+    padding: 1em;
+    border-radius: 3em;
+    margin: 10px;
+    display: inline-block;
+
+}
+
 form input[type="password"],
 form textarea {
-    width: 50%;
+    width: 100%;
     text-align: center;
 
     font-size: 16px;

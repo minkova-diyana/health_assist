@@ -52,7 +52,8 @@ function showLess(event){
 
 
 function showInfo(event){
-    const allInfoElements = document.querySelectorAll('.insurance-container');
+    const parent = event.target.closest('.insurance-nav')
+    const allInfoElements = parent.querySelectorAll('.insurance-container');
     allInfoElements.forEach(infoElement => {
         infoElement.style.display = 'none';
         const scrollContext = infoElement.querySelector('p')

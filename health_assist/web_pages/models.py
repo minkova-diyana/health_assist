@@ -13,6 +13,22 @@ class Pages(models.Model):
     def __str__(self):
         return self.name
 
+    #  ATENTION EXPERIMENT ALSO IN THE TEMPLATS DON'T COMMIT!!!!
+
+
+class InsuranceTypes(TranslatableModel):
+    translations = TranslatedFields(
+        type_insurance=models.CharField(
+            max_length=100,
+            null=True,
+            blank=True
+        ),
+        description=models.CharField(max_length=100, null=False, blank=False)
+    )
+
+    def __str__(self):
+        name_translation = self.get_translation('en')
+        return f'{name_translation.type_insurance}'
 
 class Information(TranslatableModel):
     translations = TranslatedFields(
@@ -30,11 +46,13 @@ class Information(TranslatableModel):
         Pages,
         on_delete=models.CASCADE
     )
-    type_insurance = models.CharField(
-        max_length=100,
+
+    type_insurance = models.ForeignKey(
+        InsuranceTypes,
+        on_delete=models.CASCADE,
+        related_name='insurance_type',
         null=True,
-        blank=True,
-        choices=TypeInsurance.choices
+        blank=True
     )
     slug = models.SlugField(
         max_length=100,

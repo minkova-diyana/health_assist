@@ -80,13 +80,13 @@ nav #close{
         z-index: 2;
         transition: 1s;
     }
-    nav .bi{
-        display: block;
-        padding: 1px;
-        font-size: 40px;
-        color: #001935;
-        cursor: pointer;
-    }
+    /*nav .bi{*/
+    /*    display: block;*/
+    /*    padding: 1px;*/
+    /*    font-size: 40px;*/
+    /*    color: #001935;*/
+    /*    cursor: pointer;*/
+    /*}*/
     nav .bi-x-square-fill{
         display: none;
         padding: 0 2px;

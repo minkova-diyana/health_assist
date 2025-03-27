@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 13:04+0200\n"
+"POT-Creation-Date: 2025-03-26 19:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\health_assist\accounts\admin.py:14
 msgid "Permissions"
 msgstr ""
@@ -84,15 +85,15 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:19
+#: .\health_assist\web_pages\models.py:32
 msgid "Title"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:20
+#: .\health_assist\web_pages\models.py:33
 msgid "Content"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:24
+#: .\health_assist\web_pages\models.py:37
 msgid "Hidden information"
 msgstr ""
 
@@ -388,29 +389,25 @@ msgstr ""
 msgid "Add Insurance"
 msgstr ""
 
-#: .\templates\pages\insurances.html:24
-msgid "General Insurances"
-msgstr ""
-
-#: .\templates\pages\insurances.html:41 .\templates\pages\insurances.html:87
+#: .\templates\pages\insurances.html:47 .\templates\pages\insurances.html:100
 #: .\templates\pages\news.html:34
 msgid "Show More"
 msgstr ""
 
-#: .\templates\pages\insurances.html:42 .\templates\pages\insurances.html:88
+#: .\templates\pages\insurances.html:48 .\templates\pages\insurances.html:101
 #: .\templates\pages\news.html:35
 msgid "Show Less"
 msgstr ""
 
-#: .\templates\pages\insurances.html:49
+#: .\templates\pages\insurances.html:56
 msgid "Has no General Insurance Info"
 msgstr ""
 
-#: .\templates\pages\insurances.html:70
+#: .\templates\pages\insurances.html:81
 msgid "Health Insurances"
 msgstr ""
 
-#: .\templates\pages\insurances.html:95
+#: .\templates\pages\insurances.html:108
 msgid "Has no Health Insurance Info"
 msgstr ""
 

@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
 
 from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm, PartnersEditForm, ContactForm
-from health_assist.web_pages.models import Information, Partners
+from health_assist.web_pages.models import Information, Partners, InsuranceTypes
 from health_assist.web_pages.signals import contact_form_submitted
 
 
@@ -35,9 +35,18 @@ class InsuranceDetailView(ListView):
     template_name = 'pages/insurances.html'
     context_object_name = 'insurances'
 
+    def get_queryset(self):
+        return Information.objects.filter(pages__name='insurances').order_by('created_at')
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['insurances'] = Information.objects.filter(pages__name='insurances').order_by('created_at')
+
+        types = InsuranceTypes.objects.values_list("id", "translations__type_insurance")
+        context['insurance_groups'] = {
+            insurance_type: context['insurances'].filter(type_insurance=id_type)
+            for id_type, insurance_type in types
+        }
+
         return context
 
 

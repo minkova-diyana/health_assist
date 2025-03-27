@@ -36,11 +36,7 @@ ul.menu {
   z-index: 10000;
 }
 
-ul.menu li.menu-item:nth-child(6) {
-  margin-top: 5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid #363664;
-}
+
 
 ul.menu li.menu-item + li.menu-item {
   margin-top: 0.75rem;
@@ -233,6 +229,12 @@ summary i {
   border-radius: 10px;
   box-shadow: 0 10px 50px 0 rgba(5, 4, 62, 0.25);
   z-index: 10000;
+}
+
+  ul.menu li.menu-item:nth-child(6) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 }

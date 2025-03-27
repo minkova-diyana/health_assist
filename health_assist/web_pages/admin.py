@@ -1,7 +1,7 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
 
-from health_assist.web_pages.models import Pages, Information, Partners
+from health_assist.web_pages.models import Pages, Information, Partners, InsuranceTypes
 
 
 # Register your models here.
@@ -17,4 +17,9 @@ class InformationAdmin(TranslatableAdmin):
 
 @admin.register(Partners)
 class PartnersAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(InsuranceTypes)
+class InsuranceTypesAdmin(TranslatableAdmin):
     pass

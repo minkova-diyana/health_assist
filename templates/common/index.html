@@ -7,7 +7,7 @@
 
 
 {% block content %}
-    
+{#     #  ATENTION EXPERIMENT ALSO IN THE TEMPLATS DON'T COMMIT!!!!#}
 <!--General Insurances -->
 <section class="information">
     <section class="general-insurances">
@@ -15,12 +15,12 @@
         <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
         
         <div class="row">
-            {% for insurance in general %}
+            {% for insurance in information %}
                 <div class="insurance-col">
-                    <h3>{{ insurance.title }}</h3>
+                    <h3>{{ insurance.type_insurance|title }}</h3>
                     <p>
-                    <a href="{% url 'insurances'%}"><p>
-                        {{ insurance.content }}
+                    <a href="{% url 'insurances'%}#{{ insurance.type_insurance }}"><p>
+                        {{ insurance.description }}
                     </p></a>
                 </div>
             {% endfor %}

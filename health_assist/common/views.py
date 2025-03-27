@@ -3,21 +3,17 @@ from django.views.generic import TemplateView
 
 from health_assist.accounts.models import EmployeeProfile
 from health_assist.web_pages.forms import ContactForm
-from health_assist.web_pages.models import Information
+from health_assist.web_pages.models import InsuranceTypes
 from health_assist.web_pages.signals import contact_form_submitted
 
 
 # Create your views here.
 def home_page(request):
-    insurances = Information.objects.filter(pages__name='insurances')
-    general = 'No insurances added'
-    health = 'No insurances added'
-    if insurances:
-        general = insurances.filter(type_insurance='general')[:3]
-        health = insurances.filter(type_insurance='health')[:3]
+    information = InsuranceTypes.objects.all()
     context = {
-        'general': general,
-        'health': health
+        'information': information,
+
+
     }
     return render(request, 'common/index.html', context)
 

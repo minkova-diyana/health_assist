@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 13:04+0200\n"
+"POT-Creation-Date: 2025-03-26 19:22+0200\n"
 "PO-Revision-Date: 2025-03-25 13:06+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,15 +86,15 @@ msgstr "Тема на имейла"
 msgid "Message"
 msgstr "Съобщение"
 
-#: .\health_assist\web_pages\models.py:19
+#: .\health_assist\web_pages\models.py:32
 msgid "Title"
 msgstr "Заглавие"
 
-#: .\health_assist\web_pages\models.py:20
+#: .\health_assist\web_pages\models.py:33
 msgid "Content"
 msgstr "Увод"
 
-#: .\health_assist\web_pages\models.py:24
+#: .\health_assist\web_pages\models.py:37
 msgid "Hidden information"
 msgstr "Повече информация"
 
@@ -122,8 +122,7 @@ msgstr "Обнови Имейл"
 #: .\templates\accounts\password-update.html:15
 #: .\templates\accounts\profile-set-up.html:15
 #: .\templates\common\add-info.html:20 .\templates\common\add-partner.html:16
-#: .\templates\common\edit-info.html:19
-#: .\templates\common\edit-partner.html:16
+#: .\templates\common\edit-info.html:19 .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
 #: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
@@ -197,8 +196,8 @@ msgstr "Промени твоята профил информация"
 msgid "Add information"
 msgstr "Добави информация"
 
-#: .\templates\common\add-partner.html:5
-#: .\templates\common\edit-partner.html:5 .\templates\pages\partners.html:5
+#: .\templates\common\add-partner.html:5 .\templates\common\edit-partner.html:5
+#: .\templates\pages\partners.html:5
 msgid "Partners"
 msgstr "Партньори"
 
@@ -213,8 +212,8 @@ msgstr "Качеството на обслужване е най-важно за
 #: .\templates\common\base.html:21
 msgid "Every day we try to find new and better ways to assist our clients."
 msgstr ""
-"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на"
-" нашите клиенти."
+"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на "
+"нашите клиенти."
 
 #: .\templates\common\base.html:27
 msgid "Our app for you to manage your health insurance"
@@ -397,29 +396,25 @@ msgstr "Застраховки"
 msgid "Add Insurance"
 msgstr "Добави застраховка"
 
-#: .\templates\pages\insurances.html:24
-msgid "General Insurances"
-msgstr "Общо Застраховане"
-
-#: .\templates\pages\insurances.html:41 .\templates\pages\insurances.html:87
+#: .\templates\pages\insurances.html:47 .\templates\pages\insurances.html:100
 #: .\templates\pages\news.html:34
 msgid "Show More"
 msgstr "Покажи повече"
 
-#: .\templates\pages\insurances.html:42 .\templates\pages\insurances.html:88
+#: .\templates\pages\insurances.html:48 .\templates\pages\insurances.html:101
 #: .\templates\pages\news.html:35
 msgid "Show Less"
 msgstr "Покажи по-малко"
 
-#: .\templates\pages\insurances.html:49
+#: .\templates\pages\insurances.html:56
 msgid "Has no General Insurance Info"
 msgstr "Няма добавена информация за общо застраховане"
 
-#: .\templates\pages\insurances.html:70
+#: .\templates\pages\insurances.html:81
 msgid "Health Insurances"
 msgstr "Здравно Застраховане"
 
-#: .\templates\pages\insurances.html:95
+#: .\templates\pages\insurances.html:108
 msgid "Has no Health Insurance Info"
 msgstr "Няма добавена информация за здравно застраховане"
 
@@ -454,6 +449,9 @@ msgstr "Нямаш акаунт"
 #: .\templates\registration\register.html:19
 msgid "You have an account"
 msgstr "Имаш акаунт"
+
+#~ msgid "General Insurances"
+#~ msgstr "Общо Застраховане"
 
 #~ msgid "Change Language"
 #~ msgstr "Смени Езика"

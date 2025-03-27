@@ -2,5 +2,7 @@ from django.db import models
 
 
 class TypeInsurance(models.TextChoices):
-    GENERAL = 'general', 'general'
+    ESTATE = 'estate', 'estate'
+    AUTO = 'auto', 'auto'
+    BUSINESS = 'business', 'business'
     HEALTH = 'health', 'health'
