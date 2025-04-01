@@ -25,7 +25,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        'healthnet.finance',
+]
 
 # Application definition
 MY_APPS = [
