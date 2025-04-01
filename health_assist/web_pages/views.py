@@ -36,7 +36,7 @@ class InsuranceDetailView(ListView):
     context_object_name = 'insurances'
 
     def get_queryset(self):
-        return Information.objects.filter(pages__name='insurances').order_by('created_at')
+        return Information.objects.filter(pages__name='insurances').order_by('-created_at')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -48,6 +48,15 @@ class InsuranceDetailView(ListView):
         }
 
         return context
+
+
+class QuestionsDetailView(ListView):
+    model = Information
+    template_name = 'pages/questions.html'
+    context_object_name = 'questions'
+
+    def get_queryset(self):
+        return Information.objects.filter(pages__name='questions').order_by('-created_at')
 
 
 class PageInfoAddView(CreateView):

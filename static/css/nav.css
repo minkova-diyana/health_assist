@@ -5,10 +5,10 @@ nav .bi{
     height: 24px;
     width: 24px;
     margin-bottom: -30px;
-    margin-right: -40px;
+     margin-right: -40px;
     cursor: pointer;
-    margin-left: auto;
-    align-self: center;
+    /*! margin-left: unset; */
+    /*! float: right; */
 }
 nav {
     display: flex;
@@ -50,18 +50,12 @@ nav img{
 .nav-links ul li:hover:after{
     width: 100%;
 }
-nav #menue{
 
-    display: none;
-}
-nav #close{
-    display: none;
-}
 
 @media(max-width:900px){
-    .nav #menue{
-
-    display: block;
+    nav .bi{
+        display: block;
+        padding: 0 0.5em;
     }
     .nav-links ul li{
         display: block;
@@ -87,23 +81,25 @@ nav #close{
     /*    color: #001935;*/
     /*    cursor: pointer;*/
     /*}*/
-    nav .bi-x-square-fill{
-        display: none;
-        padding: 0 2px;
-        color:#ffbfbf;
-        font-size: 20px;
-        cursor: pointer;
-    }
+    /*nav .bi-x-square-fill{*/
+    /*    display: none;*/
+    /*    padding: 0 2px;*/
+    /*    color:#ffbfbf;*/
+    /*    font-size: 20px;*/
+    /*    cursor: pointer;*/
+    /*}*/
     .nav-links ul {
         padding: 30px;
     }
 
      .flag-image {
         height: 20px;
-        position: absolute;
+         margin-right: -180px;
+        /*! position: revert; */
         top: 4px;
         right: -200px;
-        display: none;
+        /*! display: none; */
+        float: right;
     }
 
 }

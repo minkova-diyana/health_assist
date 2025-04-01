@@ -99,7 +99,7 @@
     border-style:solid;
 }
 
-#civil-liability, #estate, #business, #personal{
+#civil-liability, #estate, #business, #personal, #other{
     display: flex;
     flex-direction: column;
     justify-content: space-between;

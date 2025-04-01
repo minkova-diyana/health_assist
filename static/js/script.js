@@ -5,7 +5,8 @@ const flagElement = document.querySelector('.flag-image');
 
 const showMoreButtonElement = document.querySelectorAll('.show-more');
 const showLessElementBtn = document.querySelectorAll('.show-less');
-
+const showAnswerButtonElement = document.querySelectorAll('.show-answer');
+const hideAnswerButtonElement = document.querySelectorAll('.hide-answer');
 
 const gInsuranceMenueElements = document.querySelectorAll('#g')
 const hInsuranceMenueElements = document.querySelectorAll('#h')
@@ -38,6 +39,18 @@ function showMore(event){
     showMoreButton.style.display = 'none';
 }
 
+
+function showAnswer(event){
+    const parent = event.target.closest('.container');
+    const hiddenText = parent.querySelector('.hiden-info');
+    const showLessButton = parent.querySelector('.hide-answer');
+    const showMoreButton = parent.querySelector('.show-answer');
+
+    hiddenText.style.display = 'block';
+    showLessButton.style.display = 'table-row';
+    showMoreButton.style.display = 'none';
+}
+
 function showLess(event){
     const parent = event.target.closest('.container');
 
@@ -50,6 +63,18 @@ function showLess(event){
     showMoreButton.style.display = 'block';
 }
 
+
+function hideAnswer(event){
+    const parent = event.target.closest('.container');
+
+    const hiddenText = parent.querySelector('.hiden-info');
+    const showLessButton = parent.querySelector('.hide-answer');
+    const showMoreButton = parent.querySelector('.show-answer');
+
+    hiddenText.style.display = 'none';
+    showLessButton.style.display = 'none';
+    showMoreButton.style.display = 'block';
+}
 
 function showInfo(event){
     const parent = event.target.closest('.insurance-nav')
@@ -82,6 +107,14 @@ menuButtonElement.addEventListener('click', showMenu);
 closeMenuButtonElement.addEventListener('click', closeMenu);
 showMoreButtonElement.forEach((element) => {
     element.addEventListener('click', showMore)
+});
+
+showAnswerButtonElement.forEach((element) => {
+    element.addEventListener('click', showAnswer)
+});
+
+hideAnswerButtonElement.forEach((element) => {
+    element.addEventListener('click', hideAnswer)
 });
 showLessElementBtn.forEach((element) => {
     element.addEventListener('click', showLess)

@@ -17,14 +17,16 @@
     {% block header %}
         <h1>{% trans 'YOUR INSURANCE BROCKER'%}</h1>
       
-        <p style="margin: 0; padding: 0;">{% trans 'We pried on the quality of service we provide.' %}</p>
-        <p style="margin-top: 0; padding-top: 0">{% trans 'Every day we try to find new and better ways to assist our clients.' %}</p>
+        
         {% if request.user.is_authenticated %}
             <a href="{% url 'health-home' %}" class="hero-btn">Health Assist</a>
         {% else %}
             <a href="{% url 'login' %}" class="hero-btn">Health Assist</a>
         {% endif %}
         <h3 style="padding: 10px; color: #521b0f;">{% trans 'Our app for you to manage your health insurance' %}</h3>
+        
+        <p style="margin: 0; padding-top: 30px;">{% trans 'We pried on the quality of service we  provide.' %}<a style="padding-top:50px;"  href={% url 'about-us' %}>About Us</a></p>
+        <p style="margin-top: 0; padding-top: 0">{% trans 'Every day we try to find new and better ways to assist our clients.' %}</p>
     {% endblock %}
     </div>
     </section>
