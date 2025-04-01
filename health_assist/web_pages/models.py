@@ -26,6 +26,7 @@ class InsuranceTypes(TranslatableModel):
         description=models.TextField(null=False, blank=False)
     )
 
+
     def __str__(self):
         name_translation = self.get_translation('en')
         return f'{name_translation.type_insurance}'

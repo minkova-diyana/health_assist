@@ -21,6 +21,7 @@
         <section class="general-insurance">
         {% if insurances %}
             {% for type, insurances in insurance_groups.items %}
+                
                 <nav class="insurance-nav">
     <!-- LEFT section -->                
                     <div class="left">
@@ -57,7 +58,8 @@
                         </div>
 
                     {% endfor %}
-                 </div>    
+                 </div>
+                
     <!-- RIGHT section -->
                 <div class="right">
                     <ul>
@@ -69,6 +71,7 @@
                     </ul>
                 </div>        
                 </nav>
+                
             {% endfor %}
         {% endif %}
         </section>

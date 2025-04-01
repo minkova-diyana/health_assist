@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.utils.translation import get_language
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
 
 from health_assist.web_pages.forms import InfoEditForm, InfoAddForm, PartnersAddForm, PartnersEditForm, ContactForm
@@ -36,12 +37,15 @@ class InsuranceDetailView(ListView):
     context_object_name = 'insurances'
 
     def get_queryset(self):
-        return Information.objects.filter(pages__name='insurances').order_by('-created_at')
+        current_lang = get_language()
+        return Information.objects.filter(pages__name='insurances',
+                                          translations__language_code=current_lang).order_by('-created_at')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-        types = InsuranceTypes.objects.values_list("id", "translations__type_insurance")
+        current_lang = get_language()
+        types = InsuranceTypes.objects.filter(
+            translations__language_code=current_lang).values_list("id", "translations__type_insurance")
         context['insurance_groups'] = {
             insurance_type: context['insurances'].filter(type_insurance=id_type)
             for id_type, insurance_type in types
