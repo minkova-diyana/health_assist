@@ -9,7 +9,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-26 19:22+0200\n"
-"PO-Revision-Date: 2025-04-23 12:48+0000\n"
+
+"PO-Revision-Date: 2025-04-23 11:02+0000\n"
+
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -101,6 +103,31 @@ msgstr ""
 #: .\templates\404.html:9
 msgid "Oops"
 msgstr ""
+
+
+#: .\health_assist\web_pages\forms.py:51
+msgid "Your Email"
+msgstr "Your Email"
+
+#: .\health_assist\web_pages\forms.py:57
+msgid "Subject"
+msgstr "Subject"
+
+#: .\health_assist\web_pages\forms.py:62
+msgid "Message"
+msgstr "Massage"
+
+#: .\health_assist\web_pages\models.py:32
+msgid "Title"
+msgstr "Title"
+
+#: .\health_assist\web_pages\models.py:33
+msgid "Content"
+msgstr "Content
+
+#: .\health_assist\web_pages\models.py:37
+msgid "Hidden information"
+msgstr "Hidden informatio
 
 #: .\templates\404.html:10
 msgid "Something went wrong"
