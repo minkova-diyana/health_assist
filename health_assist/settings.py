@@ -26,7 +26,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
-        'healthnet.finance', 'localhost', '127.0.0.1',
+ 'healthnet.finance',
 ]
 
 # Application definition
@@ -205,4 +205,3 @@ STORAGES = {
         'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
     },
 }
-
