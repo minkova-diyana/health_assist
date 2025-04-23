@@ -75,56 +75,5 @@
             {% endfor %}
         {% endif %}
         </section>
-    
-        <section class="health-inshurance">
-            <nav>
-            
-    <!-- LEFT section -->        
-                <div class="left">
-                    <h3>{% trans 'Health Insurances' %}</h3>
-                </div>
-            
-    <!-- MIDDLE section -->        
-                <div class="middle">
-                     {% for insurance in insurances %}
-                        {% if insurance.type_insurance == 'health' %}
-                            <div class="insurance-container" id="{{ insurance.slug }}" data-type="h">
-                                <h2>
-                                    {{ insurance.title }}
-                                </h2>
-                                <p class="container">
-                                    {{ insurance.content|linebreaks}}
-                                    {% if user.is_staff %}
-                                        <a href="{% url 'edit-info' insurance.pk %}"><i class="bi bi-pencil-square"  id="insurance" ></i></a>
-                                        <a href="{% url 'delete-info' insurance.pk %}"><i class="bi bi-trash3"></i></a>
-                                    {% endif %}
-                                    {% if insurance.hidden_info %}
-                                        <span class="hiden-info">{{ insurance.hidden_info|linebreaks }}</span>
-                                        <button class="show-more">{% trans 'Show More' %}</button>
-                                        <button class="show-less">{% trans 'Show Less' %}</button>
-                                    {% endif %}
-                                </p>
-                            </div>
-                        {% endif %}
-                    {% empty %}
-                        <div class="insurance-container" id="civil-liability">
-                            <h3>{% trans 'Has no Health Insurance Info' %}</h3>
-                        </div>
-
-                    {% endfor %}
-                </div>
-            
-    <!-- RIGHT section -->        
-                <div class="right">
-                    <ul>
-                         {% for i in insurances %}
-                            {% if i.type_insurance == 'health' %}
-                            <li id="h" class="insurance" data-info="{{ i.slug }}">{{ i.title }}</li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            </nav>
-        </section>
     </section>
 {% endblock %}
