@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-26 19:22+0200\n"
-"PO-Revision-Date: 2025-03-25 13:06+0000\n"
+"PO-Revision-Date: 2025-04-23 12:51+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -122,7 +122,8 @@ msgstr "Обнови Имейл"
 #: .\templates\accounts\password-update.html:15
 #: .\templates\accounts\profile-set-up.html:15
 #: .\templates\common\add-info.html:20 .\templates\common\add-partner.html:16
-#: .\templates\common\edit-info.html:19 .\templates\common\edit-partner.html:16
+#: .\templates\common\edit-info.html:19
+#: .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
 #: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
@@ -196,14 +197,14 @@ msgstr "Промени твоята профил информация"
 msgid "Add information"
 msgstr "Добави информация"
 
-#: .\templates\common\add-partner.html:5 .\templates\common\edit-partner.html:5
-#: .\templates\pages\partners.html:5
+#: .\templates\common\add-partner.html:5
+#: .\templates\common\edit-partner.html:5 .\templates\pages\partners.html:5
 msgid "Partners"
 msgstr "Партньори"
 
 #: .\templates\common\base.html:18
 msgid "YOUR INSURANCE BROCKER"
-msgstr "ТВОЯ ЗАСТРАХОВАТЕЛЕН БРОКЕР"
+msgstr "ТВОЯT ЗАСТРАХОВАТЕЛЕН БРОКЕР"
 
 #: .\templates\common\base.html:20
 msgid "We pried on the quality of service we provide."
@@ -212,8 +213,8 @@ msgstr "Качеството на обслужване е най-важно за
 #: .\templates\common\base.html:21
 msgid "Every day we try to find new and better ways to assist our clients."
 msgstr ""
-"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на "
-"нашите клиенти."
+"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на"
+" нашите клиенти."
 
 #: .\templates\common\base.html:27
 msgid "Our app for you to manage your health insurance"

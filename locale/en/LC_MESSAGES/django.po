@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-26 19:22+0200\n"
-"PO-Revision-Date: 2025-04-23 10:37+0000\n"
+"PO-Revision-Date: 2025-04-23 12:48+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -72,35 +72,35 @@ msgstr ""
 
 #: .\health_assist\web_pages\forms.py:46
 msgid "Your Name"
-msgstr "Име"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:51
 msgid "Your Email"
-msgstr "E-mail"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:57
 msgid "Subject"
-msgstr "Тема"
+msgstr ""
 
 #: .\health_assist\web_pages\forms.py:62
 msgid "Message"
-msgstr "Съобщение"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:32
 msgid "Title"
-msgstr "Заглавие"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:33
 msgid "Content"
-msgstr "Увод"
+msgstr ""
 
 #: .\health_assist\web_pages\models.py:37
 msgid "Hidden information"
-msgstr "Допълнителен текст"
+msgstr ""
 
 #: .\templates\404.html:9
 msgid "Oops"
-msgstr "Оопа"
+msgstr ""
 
 #: .\templates\404.html:10
 msgid "Something went wrong"
