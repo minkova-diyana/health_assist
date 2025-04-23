@@ -75,7 +75,9 @@ class EmployeeProfile(models.Model):
     )
 
     def save(self, *args, **kwargs):
-        self.uc_id_num = encrypt_data(self.uc_id_num)
+        is_new = self._state.adding
+        if is_new:
+            self.uc_id_num = encrypt_data(self.uc_id_num)
 
         super().save(*args, **kwargs)
 
