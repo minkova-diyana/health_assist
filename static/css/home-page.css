@@ -16,8 +16,10 @@
 
 }
 
-.information{
-    background: linear-gradient(rgba(226, 238, 255, 0.432), rgba(255, 224, 224, 0.404));
+main{
+    /*background: linear-gradient(rgba(194, 205, 255, 0.151), rgba(255, 224, 224, 0.425));*/
+    background: linear-gradient(rgb(194 202 225 / 49%), #de77611c);
+    /*background: linear-gradient(rgb(194 202 225 / 78%), #de77611c);*/
 }
 
 .text-box{
@@ -31,6 +33,7 @@
 }
 .text-box h1{
     margin-top: 100px;
+    padding: 1em;
     font-size: 58px;
     color: #641010;
 }
@@ -62,6 +65,7 @@
 
 @media(max-width:900px) {
     .text-box h1 {
+        padding: 2.5em 0;
         font-size: 20px;
     }
 }
@@ -73,6 +77,8 @@
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    border-bottom: 3px solid #011049;
+    /* border-bottom-width: 50px; */
 }
 h1{
     font-size: 36px;
@@ -80,6 +86,8 @@ h1{
 }
 a{
     text-decoration: none;
+    color: #011d3d;
+    /* font-weight: 550; */
 }
 p{
     color: #001935;
@@ -95,7 +103,7 @@ p{
 }
 .insurance-col{
     flex-basis: 31%;
-    background: #cbf6ff;
+    background: #dff5f9;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;

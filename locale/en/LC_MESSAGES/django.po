@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-26 19:22+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2025-04-23 10:37+0000\n"
+"Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
 
 #: .\health_assist\accounts\admin.py:14
 msgid "Permissions"
@@ -71,35 +72,35 @@ msgstr ""
 
 #: .\health_assist\web_pages\forms.py:46
 msgid "Your Name"
-msgstr ""
+msgstr "Име"
 
 #: .\health_assist\web_pages\forms.py:51
 msgid "Your Email"
-msgstr ""
+msgstr "E-mail"
 
 #: .\health_assist\web_pages\forms.py:57
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #: .\health_assist\web_pages\forms.py:62
 msgid "Message"
-msgstr ""
+msgstr "Съобщение"
 
 #: .\health_assist\web_pages\models.py:32
 msgid "Title"
-msgstr ""
+msgstr "Заглавие"
 
 #: .\health_assist\web_pages\models.py:33
 msgid "Content"
-msgstr ""
+msgstr "Увод"
 
 #: .\health_assist\web_pages\models.py:37
 msgid "Hidden information"
-msgstr ""
+msgstr "Допълнителен текст"
 
 #: .\templates\404.html:9
 msgid "Oops"
-msgstr ""
+msgstr "Оопа"
 
 #: .\templates\404.html:10
 msgid "Something went wrong"
@@ -121,7 +122,8 @@ msgstr ""
 #: .\templates\accounts\password-update.html:15
 #: .\templates\accounts\profile-set-up.html:15
 #: .\templates\common\add-info.html:20 .\templates\common\add-partner.html:16
-#: .\templates\common\edit-info.html:19 .\templates\common\edit-partner.html:16
+#: .\templates\common\edit-info.html:19
+#: .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
 #: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
@@ -195,8 +197,8 @@ msgstr ""
 msgid "Add information"
 msgstr ""
 
-#: .\templates\common\add-partner.html:5 .\templates\common\edit-partner.html:5
-#: .\templates\pages\partners.html:5
+#: .\templates\common\add-partner.html:5
+#: .\templates\common\edit-partner.html:5 .\templates\pages\partners.html:5
 msgid "Partners"
 msgstr ""
 

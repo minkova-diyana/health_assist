@@ -19,41 +19,43 @@
 </svg></a>
     </div>
     {% endif %}
-    {% for q in questions %}
-         <div class="text-form-container">
-            <div class="container">
-                <h2>
-                    {{ q.title }} 
-                    <span class="show-answer"><i class="bi bi-arrow-down-short"></i></span>
-                    <span class="hide-answer"><i class="bi bi-arrow-up-short"></i></span>
-                </h2>
-            
-                    <samp class="hiden-info">{{ q.content|linebreaks }}</samp>
-                        {% if user.is_staff %}
-                            <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>
-                            <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> 
-                         {% endif %}
+    <section>
+        {% for q in questions %}
+             <div class="text-form-container">
+                <div class="container">
+                    <h2>
+                        {{ q.title }} 
+                        <span class="show-answer"><i class="bi bi-arrow-down-short"></i></span>
+                        <span class="hide-answer"><i class="bi bi-arrow-up-short"></i></span>
+                    </h2>
                 
-{#                <span class="hiden-info">#}
-{#                    <p>#}
-{#                    {{ q.content|linebreaks }}#}
-{#                    {% if user.is_staff %}#}
-{#                        <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>#}
-{#                        <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> #}
-{#                     {% endif %}#}
-{#                    {% if n.hidden_info|linebreaks %}#}
-{#                    <samp class="hiden-info">{{ n.hidden_info }}</samp>#}
-{#                    <button class="show-more">{% trans 'Show More' %}</button>#}
-{#                    <button class="show-less">{% trans 'Show Less' %}</button>#}
-{#                    {% endif %}#}
-{#                    </p>#}
-{#                </span>#}
-            </div>
-         
-         </div>
-        
-        
-    {% endfor %}    
+                        <samp class="hiden-info">{{ q.content|linebreaks }}</samp>
+                            {% if user.is_staff %}
+                                <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>
+                                <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> 
+                             {% endif %}
+                    
+    {#                <span class="hiden-info">#}
+    {#                    <p>#}
+    {#                    {{ q.content|linebreaks }}#}
+    {#                    {% if user.is_staff %}#}
+    {#                        <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>#}
+    {#                        <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> #}
+    {#                     {% endif %}#}
+    {#                    {% if n.hidden_info|linebreaks %}#}
+    {#                    <samp class="hiden-info">{{ n.hidden_info }}</samp>#}
+    {#                    <button class="show-more">{% trans 'Show More' %}</button>#}
+    {#                    <button class="show-less">{% trans 'Show Less' %}</button>#}
+    {#                    {% endif %}#}
+    {#                    </p>#}
+    {#                </span>#}
+                </div>
+             
+             </div>
+            
+            
+        {% endfor %}  
+    </section>
     
 
 {% endblock %}

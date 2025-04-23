@@ -7,14 +7,25 @@
 
 
 {% block content %}
+    
+        
 {#     #  ATENTION EXPERIMENT ALSO IN THE TEMPLATS DON'T COMMIT!!!!#}
 <!--General Insurances -->
 <section class="information">
     <section class="general-insurances">
-        <h1>{% trans 'General Insurances We Offer' %}</h1>
+        <section>
+            <h1>{% trans 'Where does it come from' %}</h1>
+            <p >{% trans 'We pried on the quality of service we  provide.' %}<a style="padding-top:50px;"  href={% url 'about-us' %}>About Us</a></p>
+            <p>{% trans 'Every day we try to find new and better ways to assist our clients.' %}</p>
+        </section>
+       
+    </section>
+<!-- Health Insurances -->
+    <section class="health-insurances">
+        <h1>{% trans 'The Insurance We Offer' %}</h1>
         <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
-        
-       <div class="row">
+    
+        <div class="row">
             {% for insurance in information %}
                 <div class="insurance-col">
                     <h3>{{ insurance.type_insurance|title }}</h3>
@@ -26,24 +37,6 @@
                     </div><div class="row">  {# Closes the row after 3 items and starts a new row #}
                 {% endif %}
             {% endfor %}
-        </div>
-    </section>
-<!-- Health Insurances -->
-    <section class="health-insurances">
-        <h1>{% trans 'Health Insurance We Offer' %}</h1>
-        <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
-    
-        <div class="row">
-            {% for insurance in health %}
-                <div class="insurance-col">
-                    <h3>{{ insurance.title }}</h3>
-                    <p>
-                    <a href="{% url 'insurances'%}"><p>
-                        {{ insurance.content }}
-                    </p></a>
-                </div>
-            {% endfor %}
-        
         </div>
     </section>
 </section>

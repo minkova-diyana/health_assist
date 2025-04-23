@@ -36,9 +36,9 @@
 /*    margin: auto;*/
 /*}*/
 
-.information{
-    background: linear-gradient(rgba(194, 205, 255, 0.151), rgba(255, 224, 224, 0.425));
-}
+/*.information{*/
+/*    background: linear-gradient(rgba(194, 205, 255, 0.151), rgba(255, 224, 224, 0.425));*/
+/*}*/
 .middle{
     flex-grow: 1;
     max-width: 50%;
@@ -171,6 +171,7 @@
         cursor: pointer;
         border-radius: 3em;
         border: none;
+        padding: 0;
     }
 
     .insurance::after{

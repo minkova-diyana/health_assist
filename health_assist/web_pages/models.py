@@ -13,7 +13,7 @@ class Pages(models.Model):
     def __str__(self):
         return self.name
 
-    #  ATENTION EXPERIMENT ALSO IN THE TEMPLATS DON'T COMMIT!!!!
+
 
 
 class InsuranceTypes(TranslatableModel):
@@ -25,7 +25,6 @@ class InsuranceTypes(TranslatableModel):
         ),
         description=models.TextField(null=False, blank=False)
     )
-
 
     def __str__(self):
         name_translation = self.get_translation('en')

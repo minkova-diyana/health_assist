@@ -20,7 +20,9 @@
 
 
 main{
-    background: linear-gradient(rgba(194, 205, 255, 0.151), rgba(255, 224, 224, 0.425));
+    /*background: linear-gradient(rgba(194, 205, 255, 0.151), rgba(255, 224, 224, 0.425));*/
+    background: linear-gradient(rgb(194 202 225 / 49%), #de77611c);
+    /*background: linear-gradient(rgb(194 202 225 / 78%), #de77611c);*/
 }
 
 .text-box h1{

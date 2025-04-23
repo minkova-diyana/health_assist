@@ -18,7 +18,7 @@
 </svg></a>
     </div>
     {% endif %}
-
+    <section>
     {% for n in news %}
         <div class="text-form-container">
             <div class="container">
@@ -40,5 +40,6 @@
         {% empty %}
         <h2>{% trans 'We have no news for the moment' %}!!!</h2>
     {% endfor %}
+    </section>
 
 {% endblock %}

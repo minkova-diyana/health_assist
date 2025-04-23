@@ -22,17 +22,21 @@ a{
     align-items: end;
 }
 
+main > section{
+    padding: 5em 0;
+}
+
 .text-form-container {
     border-radius: 2em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1em auto;
+    margin: 0 auto 3em;
     box-sizing: border-box;
     text-align: center;
     padding: 10px 25px 10px 10px;
     border-style: double;
-    width: 30%;
+    width: 60%;
 }
 .text-form-container h2{
     font-size: 2rem;
@@ -65,7 +69,7 @@ a{
 
     .text-form-container{
         border-width: 0.5em;
-         width: 100%;
+         width: 90%;
     }
 
     .text-form-container h2{
@@ -90,6 +94,6 @@ a{
     .text-form-container{
         display: flex;
         border: double;
-        width: 100%;
+        width: 90%;
     }
 }

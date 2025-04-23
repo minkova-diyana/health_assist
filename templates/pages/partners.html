@@ -20,23 +20,25 @@
     {% endif %}
     
     <div class="row">
-    {% for p in partner %}
-            <div class="insurance-col">
-                <h2>
-                    {{ p.name }}
-                    {% if user.is_staff %}
-                        <a href="{% url 'edit-partner' p.pk %}"><i class="bi bi-pencil-square"  ></i></a>
-                        <a href="{% url 'delete-partner' p.pk %}"><i class="bi bi-trash3"></i></a> 
-                     {% endif %}
-                </h2>
-                
-                <a href="{{ p.partner_url }}" class="partners">
-                    <img src="{{ p.image.url }}" alt="img" style="width: 50%; border-radius: 2em">
-                </a>
-            </div>
-        
-        {% empty %}
-        <h2>{% trans 'We have no partners for the moment' %}!!!</h2>
-    {% endfor %}
+        {% for p in partner %}
+                <div class="insurance-col">
+                    <h2>
+                        {{ p.name }}
+                        {% if user.is_staff %}
+                            <a href="{% url 'edit-partner' p.pk %}"><i class="bi bi-pencil-square"  ></i></a>
+                            <a href="{% url 'delete-partner' p.pk %}"><i class="bi bi-trash3"></i></a> 
+                         {% endif %}
+                    </h2>
+                    
+                    <a href="{{ p.partner_url }}" class="partners">
+                        <img src="{{ p.image.url }}" alt="img" style="width: 50%; border-radius: 2em">
+                    </a>
+                </div>
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div><div class="row">  {# Closes the row after 3 items and starts a new row #}
+                {% endif %}
+            {% empty %}
+            <h2>{% trans 'We have no partners for the moment' %}!!!</h2>
+        {% endfor %}
     </div>
 {% endblock %}
