@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-26 19:22+0200\n"
+"POT-Creation-Date: 2025-05-14 12:41+0300\n"
 "PO-Revision-Date: 2025-04-23 12:48+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,11 +62,11 @@ msgstr ""
 msgid "date joined"
 msgstr ""
 
-#: .\health_assist\settings.py:132
+#: .\health_assist\settings.py:134
 msgid "English"
 msgstr ""
 
-#: .\health_assist\settings.py:133
+#: .\health_assist\settings.py:135
 msgid "Bulgarian"
 msgstr ""
 
@@ -86,15 +86,15 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:32
+#: .\health_assist\web_pages\models.py:36
 msgid "Title"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:33
+#: .\health_assist\web_pages\models.py:37
 msgid "Content"
 msgstr ""
 
-#: .\health_assist\web_pages\models.py:37
+#: .\health_assist\web_pages\models.py:41
 msgid "Hidden information"
 msgstr ""
 
@@ -122,11 +122,10 @@ msgstr ""
 #: .\templates\accounts\password-update.html:15
 #: .\templates\accounts\profile-set-up.html:15
 #: .\templates\common\add-info.html:20 .\templates\common\add-partner.html:16
-#: .\templates\common\edit-info.html:19
-#: .\templates\common\edit-partner.html:16
+#: .\templates\common\edit-info.html:19 .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
-#: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
+#: .\templates\pages\contacts.html:25 .\templates\registration\login.html:18
 #: .\templates\registration\register.html:18
 msgid "Submit"
 msgstr ""
@@ -181,7 +180,7 @@ msgid "Change Credentials"
 msgstr ""
 
 #: .\templates\accounts\profile-details.html:33
-#: .\templates\pages\about-us.html:50 .\templates\pages\contacts.html:39
+#: .\templates\pages\about-us.html:50 .\templates\pages\contacts.html:38
 msgid "Email"
 msgstr ""
 
@@ -197,8 +196,8 @@ msgstr ""
 msgid "Add information"
 msgstr ""
 
-#: .\templates\common\add-partner.html:5
-#: .\templates\common\edit-partner.html:5 .\templates\pages\partners.html:5
+#: .\templates\common\add-partner.html:5 .\templates\common\edit-partner.html:5
+#: .\templates\pages\partners.html:5
 msgid "Partners"
 msgstr ""
 
@@ -206,16 +205,16 @@ msgstr ""
 msgid "YOUR INSURANCE BROCKER"
 msgstr ""
 
-#: .\templates\common\base.html:20
-msgid "We pried on the quality of service we provide."
-msgstr ""
-
-#: .\templates\common\base.html:21
-msgid "Every day we try to find new and better ways to assist our clients."
-msgstr ""
-
-#: .\templates\common\base.html:27
+#: .\templates\common\base.html:26
 msgid "Our app for you to manage your health insurance"
+msgstr ""
+
+#: .\templates\common\base.html:28 .\templates\common\index.html:18
+msgid "We pried on the quality of service we  provide."
+msgstr ""
+
+#: .\templates\common\base.html:29 .\templates\common\index.html:19
+msgid "Every day we try to find new and better ways to assist our clients."
 msgstr ""
 
 #: .\templates\common\edit-info.html:10 .\templates\pages\news.html:10
@@ -242,43 +241,47 @@ msgstr ""
 msgid "Money laundering"
 msgstr ""
 
-#: .\templates\common\index.html:14
-msgid "General Insurances We Offer"
+#: .\templates\common\index.html:17
+msgid "Where does it come from"
 msgstr ""
 
-#: .\templates\common\index.html:15 .\templates\common\index.html:32
+#: .\templates\common\index.html:25
+msgid "The Insurance We Offer"
+msgstr ""
+
+#: .\templates\common\index.html:26
 msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 msgstr ""
 
-#: .\templates\common\index.html:31
-msgid "Health Insurance We Offer"
-msgstr ""
-
-#: .\templates\common\nav.html:26
+#: .\templates\common\nav.html:29
 msgid "HOME"
 msgstr ""
 
-#: .\templates\common\nav.html:27
+#: .\templates\common\nav.html:30
 msgid "ABOUT"
 msgstr ""
 
-#: .\templates\common\nav.html:28
+#: .\templates\common\nav.html:31
 msgid "NEWS"
 msgstr ""
 
-#: .\templates\common\nav.html:29
+#: .\templates\common\nav.html:32
 msgid "INSURANCES"
 msgstr ""
 
-#: .\templates\common\nav.html:30
+#: .\templates\common\nav.html:33
 msgid "PARTNERS"
 msgstr ""
 
-#: .\templates\common\nav.html:31
-msgid "CONTACTS"
+#: .\templates\common\nav.html:34 .\templates\pages\questions.html:6
+msgid "Q & A"
 msgstr ""
 
 #: .\templates\common\nav.html:35
+msgid "CONTACTS"
+msgstr ""
+
+#: .\templates\common\nav.html:39
 msgid "LOGOUT"
 msgstr ""
 
@@ -363,23 +366,23 @@ msgstr ""
 msgid "Show less"
 msgstr ""
 
-#: .\templates\pages\about-us.html:47 .\templates\pages\contacts.html:36
+#: .\templates\pages\about-us.html:47 .\templates\pages\contacts.html:35
 msgid "13 Beli Iskar Street"
 msgstr ""
 
-#: .\templates\pages\about-us.html:48 .\templates\pages\contacts.html:37
+#: .\templates\pages\about-us.html:48 .\templates\pages\contacts.html:36
 msgid "Sofia"
 msgstr ""
 
-#: .\templates\pages\about-us.html:49 .\templates\pages\contacts.html:38
+#: .\templates\pages\about-us.html:49 .\templates\pages\contacts.html:37
 msgid "Phone"
 msgstr ""
 
-#: .\templates\pages\contacts.html:15
+#: .\templates\pages\contacts.html:14
 msgid "We're here to answer any questions you may have"
 msgstr ""
 
-#: .\templates\pages\contacts.html:33
+#: .\templates\pages\contacts.html:32
 msgid "Contact Information"
 msgstr ""
 
@@ -391,26 +394,16 @@ msgstr ""
 msgid "Add Insurance"
 msgstr ""
 
-#: .\templates\pages\insurances.html:47 .\templates\pages\insurances.html:100
-#: .\templates\pages\news.html:34
+#: .\templates\pages\insurances.html:48 .\templates\pages\news.html:34
 msgid "Show More"
 msgstr ""
 
-#: .\templates\pages\insurances.html:48 .\templates\pages\insurances.html:101
-#: .\templates\pages\news.html:35
+#: .\templates\pages\insurances.html:49 .\templates\pages\news.html:35
 msgid "Show Less"
 msgstr ""
 
-#: .\templates\pages\insurances.html:56
+#: .\templates\pages\insurances.html:57
 msgid "Has no General Insurance Info"
-msgstr ""
-
-#: .\templates\pages\insurances.html:81
-msgid "Health Insurances"
-msgstr ""
-
-#: .\templates\pages\insurances.html:108
-msgid "Has no Health Insurance Info"
 msgstr ""
 
 #: .\templates\pages\news.html:5
@@ -433,8 +426,16 @@ msgstr ""
 msgid "Add Partners"
 msgstr ""
 
-#: .\templates\pages\partners.html:39
+#: .\templates\pages\partners.html:41
 msgid "We have no partners for the moment"
+msgstr ""
+
+#: .\templates\pages\questions.html:11
+msgid "Questions you may want to ask"
+msgstr ""
+
+#: .\templates\pages\questions.html:15
+msgid "Add Questions"
 msgstr ""
 
 #: .\templates\registration\login.html:19

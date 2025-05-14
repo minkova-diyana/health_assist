@@ -13,17 +13,18 @@
 <!--General Insurances -->
 <section class="information">
     <section class="general-insurances">
-        <section>
-            <h1>{% trans 'Where does it come from' %}</h1>
-            <p >{% trans 'We pried on the quality of service we  provide.' %}<a style="padding-top:50px;"  href={% url 'about-us' %}>About Us</a></p>
-            <p>{% trans 'Every day we try to find new and better ways to assist our clients.' %}</p>
+        
+       <section>
+            <h1>{% trans 'Protect What Matters Most' %}</h1>
+            <h3>{% trans 'Tailored Insurance Solutions for You, Your Family, and Your Business.' %}</h3>
+            
         </section>
-       
+        
     </section>
 <!-- Health Insurances -->
     <section class="health-insurances">
-        <h1>{% trans 'The Insurance We Offer' %}</h1>
-        <p>{% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' %}</p>
+{#        <h1>{% trans 'The Insurance We Offer' %}</h1>#}
+            <h2>{% trans 'We compare top insurers to get you the best coverage at the best price.' %}</h2>
     
         <div class="row">
             {% for insurance in information %}

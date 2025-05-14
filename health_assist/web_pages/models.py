@@ -34,7 +34,7 @@ class InsuranceTypes(TranslatableModel):
 class Information(TranslatableModel):
     translations = TranslatedFields(
         title=models.CharField(max_length=100, verbose_name=_("Title")),
-        content=models.TextField(max_length=500, verbose_name=_("Content")),
+        content=models.TextField(verbose_name=_("Content")),
         hidden_info=models.TextField(
             blank=True,
             null=True,

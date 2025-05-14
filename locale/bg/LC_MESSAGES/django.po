@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-26 19:22+0200\n"
-"PO-Revision-Date: 2025-04-23 12:51+0000\n"
+"POT-Creation-Date: 2025-05-14 14:11+0300\n"
+"PO-Revision-Date: 2025-05-14 14:30+0000\n"
 "Last-Translator: Anonymous User <admin@admin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -62,11 +62,11 @@ msgstr ""
 msgid "date joined"
 msgstr ""
 
-#: .\health_assist\settings.py:132
+#: .\health_assist\settings.py:134
 msgid "English"
 msgstr "Английски"
 
-#: .\health_assist\settings.py:133
+#: .\health_assist\settings.py:135
 msgid "Bulgarian"
 msgstr "Български"
 
@@ -86,15 +86,15 @@ msgstr "Тема на имейла"
 msgid "Message"
 msgstr "Съобщение"
 
-#: .\health_assist\web_pages\models.py:32
+#: .\health_assist\web_pages\models.py:36
 msgid "Title"
 msgstr "Заглавие"
 
-#: .\health_assist\web_pages\models.py:33
+#: .\health_assist\web_pages\models.py:37
 msgid "Content"
 msgstr "Увод"
 
-#: .\health_assist\web_pages\models.py:37
+#: .\health_assist\web_pages\models.py:41
 msgid "Hidden information"
 msgstr "Повече информация"
 
@@ -126,7 +126,7 @@ msgstr "Обнови Имейл"
 #: .\templates\common\edit-partner.html:16
 #: .\templates\health_assist\health-contact.html:15
 #: .\templates\packages\upload-document.html:20
-#: .\templates\pages\contacts.html:26 .\templates\registration\login.html:18
+#: .\templates\pages\contacts.html:25 .\templates\registration\login.html:18
 #: .\templates\registration\register.html:18
 msgid "Submit"
 msgstr "Изпрати"
@@ -181,7 +181,7 @@ msgid "Change Credentials"
 msgstr "Промени акаунт информация"
 
 #: .\templates\accounts\profile-details.html:33
-#: .\templates\pages\about-us.html:50 .\templates\pages\contacts.html:39
+#: .\templates\pages\about-us.html:50 .\templates\pages\contacts.html:38
 msgid "Email"
 msgstr "Имейл"
 
@@ -204,21 +204,29 @@ msgstr "Партньори"
 
 #: .\templates\common\base.html:18
 msgid "YOUR INSURANCE BROCKER"
-msgstr "ТВОЯT ЗАСТРАХОВАТЕЛЕН БРОКЕР"
+msgstr "ТВОЯТ ЗАСТРАХОВАТЕЛЕН БРОКЕР"
 
-#: .\templates\common\base.html:20
-msgid "We pried on the quality of service we provide."
-msgstr "Качеството на обслужване е най-важно за нас."
-
-#: .\templates\common\base.html:21
-msgid "Every day we try to find new and better ways to assist our clients."
+#: .\templates\common\base.html:26
+msgid ""
+"Your companion app to manage your health insurance with ease  — making it "
+"simpler, faster, and more accessible."
 msgstr ""
-"Всеки ден се опитваме да намерим нови и по-ефикасни начини да сме полезни на"
-" нашите клиенти."
+"Вашето помощно приложение за лесно управление на здравната ви застраховка — "
+"правим всичко по-просто, по-бързо и по-достъпно."
 
-#: .\templates\common\base.html:27
-msgid "Our app for you to manage your health insurance"
-msgstr "Влез в нашето приложение за здравно застраховани клиенти"
+#: .\templates\common\base.html:29
+msgid ""
+"At HealthNet Finance AD, we are committed to delivering convenient, "
+"reliable, and personalized support for your insurance needs."
+msgstr ""
+"В ХелтНет Финанс АД сме ангажирани с предоставянето на удобна, надеждна и "
+"персонализирана подкрепа за всички ваши застрахователни нужди."
+
+#: .\templates\common\base.html:30
+msgid ""
+"Every day, we work to discover new and better ways to assist our clients."
+msgstr ""
+"Всеки ден търсим нови и по-добри начини да помагаме на нашите клиенти."
 
 #: .\templates\common\edit-info.html:10 .\templates\pages\news.html:10
 msgid "Always be the first to know"
@@ -244,45 +252,52 @@ msgstr "ЕВРО"
 msgid "Money laundering"
 msgstr "Пране на пари"
 
-#: .\templates\common\index.html:14
-msgid "General Insurances We Offer"
-msgstr "Общо Застраховане"
+#: .\templates\common\index.html:18
+msgid "Protect What Matters Most"
+msgstr "Защитете това, което ви е най-ценно"
 
-#: .\templates\common\index.html:15 .\templates\common\index.html:32
-msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+#: .\templates\common\index.html:19
+msgid "Tailored Insurance Solutions for You, Your Family, and Your Business."
 msgstr ""
-"Получава лиценз № 63 за извършване на застрахователна дейност като "
-"Застрахователен брокер."
+"Индивидуални застрахователни решения за вас, вашето семейство и вашия "
+"бизнес."
 
-#: .\templates\common\index.html:31
-msgid "Health Insurance We Offer"
-msgstr "Здравно Застраховане"
+#: .\templates\common\index.html:27
+msgid ""
+"We compare top insurers to get you the best coverage at the best price."
+msgstr ""
+"Ние сравняваме водещи застрахователи, за да ви осигурим най-доброто покритие"
+" на най-добра цена."
 
-#: .\templates\common\nav.html:26
+#: .\templates\common\nav.html:29
 msgid "HOME"
 msgstr "НАЧАЛО"
 
-#: .\templates\common\nav.html:27
+#: .\templates\common\nav.html:30
 msgid "ABOUT"
 msgstr "ЗА НАС"
 
-#: .\templates\common\nav.html:28
+#: .\templates\common\nav.html:31
 msgid "NEWS"
 msgstr "НОВИНИ"
 
-#: .\templates\common\nav.html:29
+#: .\templates\common\nav.html:32
 msgid "INSURANCES"
 msgstr "ЗАСТРАХОВКИ"
 
-#: .\templates\common\nav.html:30
+#: .\templates\common\nav.html:33
 msgid "PARTNERS"
 msgstr "ПАРТНЬОРИ"
 
-#: .\templates\common\nav.html:31
+#: .\templates\common\nav.html:34 .\templates\pages\questions.html:6
+msgid "Q & A"
+msgstr ""
+
+#: .\templates\common\nav.html:35
 msgid "CONTACTS"
 msgstr "КОНТАКТИ"
 
-#: .\templates\common\nav.html:35
+#: .\templates\common\nav.html:39
 msgid "LOGOUT"
 msgstr "ИЗХОД"
 
@@ -369,23 +384,23 @@ msgstr "Покажи повече"
 msgid "Show less"
 msgstr "Покажи по-малко"
 
-#: .\templates\pages\about-us.html:47 .\templates\pages\contacts.html:36
+#: .\templates\pages\about-us.html:47 .\templates\pages\contacts.html:35
 msgid "13 Beli Iskar Street"
 msgstr "ул. Бели Искър 13"
 
-#: .\templates\pages\about-us.html:48 .\templates\pages\contacts.html:37
+#: .\templates\pages\about-us.html:48 .\templates\pages\contacts.html:36
 msgid "Sofia"
 msgstr "София"
 
-#: .\templates\pages\about-us.html:49 .\templates\pages\contacts.html:38
+#: .\templates\pages\about-us.html:49 .\templates\pages\contacts.html:37
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\templates\pages\contacts.html:15
+#: .\templates\pages\contacts.html:14
 msgid "We're here to answer any questions you may have"
 msgstr "На ваше разположение сме да отговорим на всичките ви въпроси"
 
-#: .\templates\pages\contacts.html:33
+#: .\templates\pages\contacts.html:32
 msgid "Contact Information"
 msgstr "Контакти"
 
@@ -397,27 +412,17 @@ msgstr "Застраховки"
 msgid "Add Insurance"
 msgstr "Добави застраховка"
 
-#: .\templates\pages\insurances.html:47 .\templates\pages\insurances.html:100
-#: .\templates\pages\news.html:34
+#: .\templates\pages\insurances.html:48 .\templates\pages\news.html:34
 msgid "Show More"
 msgstr "Покажи повече"
 
-#: .\templates\pages\insurances.html:48 .\templates\pages\insurances.html:101
-#: .\templates\pages\news.html:35
+#: .\templates\pages\insurances.html:49 .\templates\pages\news.html:35
 msgid "Show Less"
 msgstr "Покажи по-малко"
 
-#: .\templates\pages\insurances.html:56
+#: .\templates\pages\insurances.html:57
 msgid "Has no General Insurance Info"
 msgstr "Няма добавена информация за общо застраховане"
-
-#: .\templates\pages\insurances.html:81
-msgid "Health Insurances"
-msgstr "Здравно Застраховане"
-
-#: .\templates\pages\insurances.html:108
-msgid "Has no Health Insurance Info"
-msgstr "Няма добавена информация за здравно застраховане"
 
 #: .\templates\pages\news.html:5
 msgid "News"
@@ -439,9 +444,17 @@ msgstr "Нашите лоялни партньори"
 msgid "Add Partners"
 msgstr "Добави партньори"
 
-#: .\templates\pages\partners.html:39
+#: .\templates\pages\partners.html:41
 msgid "We have no partners for the moment"
 msgstr "Няма добавени партньори в момента"
+
+#: .\templates\pages\questions.html:11
+msgid "Questions you may want to ask"
+msgstr ""
+
+#: .\templates\pages\questions.html:15
+msgid "Add Questions"
+msgstr "Добави въпроси"
 
 #: .\templates\registration\login.html:19
 msgid "Don't have an account"
@@ -450,6 +463,30 @@ msgstr "Нямаш акаунт"
 #: .\templates\registration\register.html:19
 msgid "You have an account"
 msgstr "Имаш акаунт"
+
+#~ msgid "Our app for you to manage your health insurance"
+#~ msgstr "Влез в нашето приложение за здравно застраховани клиенти"
+
+#~ msgid "We pried on the quality of service we  provide."
+#~ msgstr "Гордеем се с качеството на услугите, които предоставяме."
+
+#, fuzzy
+#~ msgid "The Insurance We Offer"
+#~ msgstr "Здравно Застраховане"
+
+#~ msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+#~ msgstr ""
+#~ "Получава лиценз № 63 за извършване на застрахователна дейност като "
+#~ "Застрахователен брокер."
+
+#~ msgid "General Insurances We Offer"
+#~ msgstr "Общо Застраховане"
+
+#~ msgid "Health Insurances"
+#~ msgstr "Здравно Застраховане"
+
+#~ msgid "Has no Health Insurance Info"
+#~ msgstr "Няма добавена информация за здравно застраховане"
 
 #~ msgid "General Insurances"
 #~ msgstr "Общо Застраховане"

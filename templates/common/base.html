@@ -23,10 +23,12 @@
         {% else %}
             <a href="{% url 'login' %}" class="hero-btn">Health Assist</a>
         {% endif %}
-        <h3 style="padding: 10px; color: #521b0f;">{% trans 'Our app for you to manage your health insurance' %}</h3>
+        <h4 style="padding: 10px; color: #521b0f;">{% trans 'Your companion app to manage your health insurance with ease  — making it simpler, faster, and more accessible.' %}</h4>
         
-        <p style="margin: 0; padding-top: 30px;">{% trans 'We pried on the quality of service we  provide.' %}<a style="padding-top:50px;"  href={% url 'about-us' %}>About Us</a></p>
-        <p style="margin-top: 0; padding-top: 0">{% trans 'Every day we try to find new and better ways to assist our clients.' %}</p>
+        <section style="padding-top: 5em;">
+        <h4>{% trans 'At HealthNet Finance AD, we are committed to delivering convenient, reliable, and personalized support for your insurance needs.' %}</h4>
+        <h4>{% trans 'Every day, we work to discover new and better ways to assist our clients.' %}</h4>
+        </section>
     {% endblock %}
     </div>
     </section>
