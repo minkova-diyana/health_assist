@@ -29,26 +29,12 @@
                         <span class="hide-answer"><i class="bi bi-arrow-up-short"></i></span>
                     </h2>
                 
-                        <samp class="hiden-info">{{ q.content|linebreaks }}</samp>
+                        <samp class="hiden-info">{{ q.content|linebreaks|linebreaksbr|urlizetrunc:25 }}</samp>
                             {% if user.is_staff %}
                                 <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>
                                 <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> 
                              {% endif %}
-                    
-    {#                <span class="hiden-info">#}
-    {#                    <p>#}
-    {#                    {{ q.content|linebreaks }}#}
-    {#                    {% if user.is_staff %}#}
-    {#                        <a href="{% url 'edit-info' q.pk %}"><i class="bi bi-pencil-square"  ></i></a>#}
-    {#                        <a href="{% url 'delete-info' q.pk %}"><i class="bi bi-trash3"></i></a> #}
-    {#                     {% endif %}#}
-    {#                    {% if n.hidden_info|linebreaks %}#}
-    {#                    <samp class="hiden-info">{{ n.hidden_info }}</samp>#}
-    {#                    <button class="show-more">{% trans 'Show More' %}</button>#}
-    {#                    <button class="show-less">{% trans 'Show Less' %}</button>#}
-    {#                    {% endif %}#}
-    {#                    </p>#}
-    {#                </span>#}
+                
                 </div>
              
              </div>

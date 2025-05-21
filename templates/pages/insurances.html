@@ -38,13 +38,13 @@
                             </h2>
                             <div class="container">
                                 <p>
-                                    {{ insurance.content|linebreaks}}
+                                    {{ insurance.content|linebreaks|linebreaksbr|urlizetrunc:25}}
                                     {% if user.is_staff %}
                                         <a href="{% url 'edit-info' insurance.pk %}"><i class="bi bi-pencil-square"  id="insurance" ></i></a>
                                         <a href="{% url 'delete-info' insurance.pk %}"><i class="bi bi-trash3"></i></a>
                                     {% endif %}
                                     {% if insurance.hidden_info %}
-                                        <span class="hiden-info">{{ insurance.hidden_info|linebreaks }}</span>
+                                        <span class="hiden-info">{{ insurance.hidden_info|linebreaks|linebreaksbr|urlizetrunc:25}}</span>
                                         <button class="show-more">{% trans 'Show More' %}</button>
                                         <button class="show-less">{% trans 'Show Less' %}</button>
                                     {% endif %}

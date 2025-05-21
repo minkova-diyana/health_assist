@@ -14,8 +14,6 @@ class Pages(models.Model):
         return self.name
 
 
-
-
 class InsuranceTypes(TranslatableModel):
     translations = TranslatedFields(
         type_insurance=models.CharField(
