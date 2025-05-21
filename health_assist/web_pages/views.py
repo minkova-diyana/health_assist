@@ -47,7 +47,7 @@ class InsuranceDetailView(ListView):
         types = InsuranceTypes.objects.filter(
             translations__language_code=current_lang).values_list("id", "translations__type_insurance")
         context['insurance_groups'] = {
-            insurance_type: context['insurances'].filter(type_insurance=id_type)
+            insurance_type: context['insurances'].filter(type_insurance=id_type).order_by('created_at')
             for id_type, insurance_type in types
         }
 
