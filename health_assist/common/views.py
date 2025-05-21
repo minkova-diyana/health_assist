@@ -10,6 +10,7 @@ from health_assist.web_pages.signals import contact_form_submitted
 # Create your views here.
 def home_page(request):
     information = InsuranceTypes.objects.all()
+
     context = {
         'information': information,
 

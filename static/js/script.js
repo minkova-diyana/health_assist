@@ -8,8 +8,6 @@ const showLessElementBtn = document.querySelectorAll('.show-less');
 const showAnswerButtonElement = document.querySelectorAll('.show-answer');
 const hideAnswerButtonElement = document.querySelectorAll('.hide-answer');
 
-const gInsuranceMenueElements = document.querySelectorAll('#g')
-const hInsuranceMenueElements = document.querySelectorAll('#h')
 
 
 
@@ -97,7 +95,7 @@ function showInfo(event){
 
 
     const clickedElement = event.target;
-    const insuranceInfo = document.getElementById(clickedElement.getAttribute('data-info'))
+    const insuranceInfo = document.getElementById(clickedElement.getAttribute('id'))
     insuranceInfo.style.display = 'flex';
 
 }

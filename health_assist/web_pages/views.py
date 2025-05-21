@@ -39,7 +39,7 @@ class InsuranceDetailView(ListView):
     def get_queryset(self):
         current_lang = get_language()
         return Information.objects.filter(pages__name='insurances',
-                                          translations__language_code=current_lang).order_by('-created_at')
+                                          translations__language_code=current_lang).order_by('created_at')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
