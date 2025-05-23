@@ -8,6 +8,7 @@ const showLessElementBtn = document.querySelectorAll('.show-less');
 const showAnswerButtonElement = document.querySelectorAll('.show-answer');
 const hideAnswerButtonElement = document.querySelectorAll('.hide-answer');
 
+const insuranceMenuElements = document.querySelectorAll('.insurance');
 
 
 
@@ -119,10 +120,7 @@ showLessElementBtn.forEach((element) => {
 });
 
 
-gInsuranceMenueElements.forEach((element) => {
+insuranceMenuElements.forEach((element) => {
     element.addEventListener('click', showInfo)
     });
 
-hInsuranceMenueElements.forEach((element) => {
-    element.addEventListener('click', showInfo)
-    });
