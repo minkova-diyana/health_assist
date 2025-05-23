@@ -57,35 +57,6 @@
     display: block;
     font-size: 20px;
 }
-/*.health-container{*/
-/*    display: none;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: flex-start;*/
-
-/*    padding: 3rem 5rem ;*/
-/*    margin-bottom: 3em;*/
-
-
-/*    box-sizing: border-box;*/
-/*    border-width: 1px;*/
-/*    border-style:solid;*/
-/*    border-radius: 2em;*/
-/*}*/
-
-/*{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: flex-start;*/
-
-/*    padding: 3rem 5rem;*/
-/*    margin-bottom: 3em;*/
-
-/*    box-sizing: border-box;*/
-/*    border-width: 1px;*/
-/*    border-style:solid;*/
-/*}*/
 
 #civil-liability, #house, #general-library, #travel, #other, #health{
     display: flex;
@@ -124,27 +95,22 @@
     transition: 0.5s;
 }
 
-/*@media (max-width: 1895px){*/
-/*    .general-insurance.left::after{*/
-/*        content: '';*/
-/*        width: 100%;*/
-/*        height: 2px;*/
-/*        background: #0f2e52;*/
-/*        display: block;*/
-/*        margin: auto;*/
-
-/*    }*/
-
-/*    */
-
-/*}*/
 
 @media (max-width: 900px){
+
+    .left h3{
+        border-bottom: 3px solid #011049;
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+}
+
     .insurance-nav{
         display: flex;
         padding: 2% 22% 2% 2%;
         justify-content: space-between;
         align-items: center;
+
     }
 
     .sub-container{
@@ -159,6 +125,7 @@
         border-radius: 3em;
         border: none;
         padding: 0;
+        text-align: center;
     }
 
     .insurance::after{
@@ -180,26 +147,14 @@
     .insurance-container{
         padding: 0.5em;
     }
-    #civil-liability{
-        padding: 0.5em;
-    }
+
     h2{
         font-size: 15px;
     }
     p{
         font-size: 12px;
     }
-    .health-container{
-        padding: 0.5em;
-    }
-    #helth-one{
-        padding: 0.5em;
-    }
 
-    /*.general-insurance .left::after, .health-inshurance .left::after{*/
-    /*    padding-right: 0;*/
-
-    /*}*/
     h3{
         font-size: 15px;
         padding-right: 0.8em;
