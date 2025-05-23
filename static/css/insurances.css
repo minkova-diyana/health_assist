@@ -87,7 +87,7 @@
     border-style:solid;
 }
 
-#civil-liability, #estate, #business, #personal, #other #health{
+#civil-liability, #house, #general-library, #travel, #other #health{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
