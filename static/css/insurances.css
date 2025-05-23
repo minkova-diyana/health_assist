@@ -57,37 +57,37 @@
     display: block;
     font-size: 20px;
 }
-.health-container{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+/*.health-container{*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: flex-start;*/
 
-    padding: 3rem 5rem ;
-    margin-bottom: 3em;
+/*    padding: 3rem 5rem ;*/
+/*    margin-bottom: 3em;*/
 
 
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style:solid;
-    border-radius: 2em;
-}
+/*    box-sizing: border-box;*/
+/*    border-width: 1px;*/
+/*    border-style:solid;*/
+/*    border-radius: 2em;*/
+/*}*/
 
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+/*{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: flex-start;*/
 
-    padding: 3rem 5rem;
-    margin-bottom: 3em;
+/*    padding: 3rem 5rem;*/
+/*    margin-bottom: 3em;*/
 
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style:solid;
-}
+/*    box-sizing: border-box;*/
+/*    border-width: 1px;*/
+/*    border-style:solid;*/
+/*}*/
 
-#civil-liability, #house, #general-library, #travel, #other #health{
+#civil-liability, #house, #general-library, #travel, #other, #health{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,37 +124,29 @@
     transition: 0.5s;
 }
 
-@media (max-width: 1895px){
-    .general-insurance.left::after{
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: #0f2e52;
-        display: block;
-        margin: auto;
+/*@media (max-width: 1895px){*/
+/*    .general-insurance.left::after{*/
+/*        content: '';*/
+/*        width: 100%;*/
+/*        height: 2px;*/
+/*        background: #0f2e52;*/
+/*        display: block;*/
+/*        margin: auto;*/
 
-    }
+/*    }*/
 
-    .health-insurance.left::after{
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: #0f2e52;
-        display: block;
-        margin: auto;
+/*    */
 
-    }
-
-}
+/*}*/
 
 @media (max-width: 900px){
-    .sub-container{
+   .sub-container{
          display: block;
         cursor: pointer;
         border-radius: 3em;
     }
 
-    .right{
+    .insurance{
         display: block;
         cursor: pointer;
         border-radius: 3em;
@@ -197,10 +189,10 @@
         padding: 0.5em;
     }
 
-    .general-insurance .left::after, .health-inshurance .left::after{
-        padding-right: 0;
+    /*.general-insurance .left::after, .health-inshurance .left::after{*/
+    /*    padding-right: 0;*/
 
-    }
+    /*}*/
     h3{
         font-size: 15px;
         padding-right: 0.8em;
