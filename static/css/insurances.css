@@ -140,7 +140,14 @@
 /*}*/
 
 @media (max-width: 900px){
-   .sub-container{
+    .insurance-nav{
+        display: flex;
+        padding: 2% 22% 2% 2%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sub-container{
          display: block;
         cursor: pointer;
         border-radius: 3em;
