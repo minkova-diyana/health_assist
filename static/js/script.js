@@ -96,7 +96,7 @@ function showInfo(event){
 
 
     const clickedElement = event.target;
-    const insuranceInfo = document.getElementById(clickedElement.getAttribute('id'))
+    const insuranceInfo = document.getElementById(clickedElement.getAttribute('data-info'))
     insuranceInfo.style.display = 'flex';
 
 }
