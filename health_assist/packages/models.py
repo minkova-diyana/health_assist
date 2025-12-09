@@ -35,8 +35,8 @@ class UnderPackageNames(TranslatableModel):
     )
 
     def __str__(self):
-        name_translation = self.get_translation('en')
-        return f'{name_translation.name}'
+        return self.safe_translation_getter('name', any_language=True)
+
 
 class UnderPackages(TranslatableModel):
     translations = TranslatedFields(
