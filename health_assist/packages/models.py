@@ -29,12 +29,21 @@ class Packages(TranslatableModel):
         return f'{name_translation.name}'
 
 
+class UnderPackageNames(TranslatableModel):
+    translations = TranslatedFields(
+        name=models.CharField(max_length=100)
+    )
+
+    def __str__(self):
+        name_translation = self.get_translation('en')
+        return f'{name_translation.name}'
+
 class UnderPackages(TranslatableModel):
     translations = TranslatedFields(
-        name=models.CharField(max_length=100),
         limit=models.CharField(max_length=255, blank=False, null=False),
         coverage=models.TextField(blank=False, null=False),
     )
+    name = models.ForeignKey(UnderPackageNames, on_delete=models.CASCADE, related_name='un_package_names')
     packages = models.ForeignKey(Packages, on_delete=models.CASCADE, related_name='under_packages')
     company = models.ForeignKey(InsuredCompanies, on_delete=models.CASCADE, related_name='under_company')
 
@@ -46,15 +55,14 @@ class UnderPackages(TranslatableModel):
     )
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
+        # super().save(*args, **kwargs)
         if not self.slug:
-            name_translation = self.get_translation('en')
+            name_translation = self.name.get_translation('en')
             self.slug = slugify(name_translation.name)
         super().save(*args, **kwargs)
 
     def __str__(self):
-        name_translation = self.get_translation('en')
+        name_translation = self.name.get_translation('en')
         return f'{name_translation.name}'
 
 

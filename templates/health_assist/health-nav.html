@@ -44,7 +44,21 @@
         </a>
     </li>
     {% endif %}
-    
+
+    <li class="menu-item"></li>
+    <li class="menu-item">
+        <a href="{% url 'contact' %}" class="menu-link">
+            <i class="ai-phone"></i>
+            <span>{% trans 'Contacts' %}</span>
+        </a>
+    </li>
+    <li class="menu-item">
+        <a href="{% url 'home'%}" class="menu-link">
+            <i class="ai-planet"></i>
+            <span>HealthNet Finance</span>
+        </a>
+    </li>
+
     <li class="menu-item">
     {% if request.LANGUAGE_CODE == 'en' %}
         <form action="{% url 'set_language' %}" method="post" style="display:inline;">
@@ -63,19 +77,6 @@
             </button>
         </form>
     {% endif %}
-    </li>
-    <li class="menu-item"></li>
-    <li class="menu-item">
-        <a href="{% url 'contact' %}" class="menu-link">
-            <i class="ai-phone"></i>
-            <span>{% trans 'Contacts' %}</span>
-        </a>
-    </li>
-    <li class="menu-item">
-        <a href="{% url 'home'%}" class="menu-link">
-            <i class="ai-planet"></i>
-            <span>HealthNet Finance</span>
-        </a>
     </li>
 
 </ul>

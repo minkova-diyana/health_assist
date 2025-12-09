@@ -7,8 +7,8 @@
 }
 
 .flag-image {
-    height: 24px;
-    width: 24px;
+    /*! height: 24px; */
+    /*! width: 24px; */
 
     cursor: pointer;
     margin-left: auto;
@@ -26,7 +26,7 @@ ul.menu {
   margin: 0;
   width: 70px;
   margin-right: auto;
-  background-color: #05043e;
+  /*! background-color: #05043e; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,7 +55,7 @@ ul.menu a.menu-link {
 }
 
 ul.menu a.menu-link:hover, ul.menu a.menu-link:focus, ul.menu a.menu-link.active {
-  background-color: #30305a;
+  background-color: #acb6bf;
   outline: 0;
 }
 
@@ -70,7 +70,7 @@ ul.menu a.menu-link i {
 
 ul.menu a.menu-link span {
   position: absolute;
-  background-color: #30305a;
+  background-color: #b8c1ca;
   font-family: "Roboto", sans-serif;
   white-space: nowrap;
   padding: 0.5rem 1rem;
@@ -80,6 +80,8 @@ ul.menu a.menu-link span {
   transform: scale(0);
   opacity: 0;
   transition: 0.15s ease;
+  margin-top: 120px;
+  margin-left: -80px;
 }
 
 ul.menu a.menu-link span:before {
@@ -88,7 +90,7 @@ ul.menu a.menu-link span:before {
   width: 12px;
   height: 12px;
   position: absolute;
-  background-color: #30305a;
+  background-color: #acb6bf;
   left: -5px;
   top: 50%;
   transform: translatey(-50%) rotate(45deg);
@@ -210,31 +212,39 @@ summary i {
 
 @media(max-width:900px) {
 
-  ul.menu {
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  left: 30px;
-  top: 30%;
-  list-style: none;
-  margin: 0;
-  width: fit-content;
-  margin-right: auto;
-  background-color: rgba(204, 204, 204, 0);
-  display: ruby-base-container;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.75rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 50px 0 rgba(5, 4, 62, 0.25);
-  z-index: 10000;
-}
+ ul.menu {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    list-style: none;
 
+    /* responsive layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        /* allows wrapping on small screens */
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;            /* full width */
+    max-width: 100%;        /* prevents overflow */
+    padding: 10px 20px;
+
+    margin: 0 auto;
+    background-color: rgba(204, 204, 204, 0);
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px 0 rgba(5, 4, 62, 0.25);
+    z-index: 10000;
+    left: 0px;
+}
   ul.menu li.menu-item:nth-child(6) {
   margin-top: 0;
   padding-top: 0;
   border-top: none;
 }
+
+  .ai-home{
+    margin-top: 13px;
+  }
+
 
 }
