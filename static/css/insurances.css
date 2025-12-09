@@ -95,6 +95,11 @@
     transition: 0.5s;
 }
 
+.sub-container{
+        display: none;
+        cursor: pointer;
+        border-radius: 3em;
+    }
 
 @media (max-width: 900px){
 
@@ -114,7 +119,7 @@
     }
 
     .sub-container{
-        display: block;
+        display: none;
         cursor: pointer;
         border-radius: 3em;
     }
