@@ -1,4 +1,11 @@
-@import "mystyle.css";
+@import "about.css";
+@import "./news.css";
+@import "./insurances.css";
+@import "./partners.css";
+@import "./contacts.css";
+@import "./form.css";
+@import "health-nav.css";
+@import "questions.css";
 
 body{
     background-image: url(images/doctor-using-modern-computer.jpg);
