@@ -1,11 +1,25 @@
-.insurance-nav > div {
+.insurance-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: right;
+}
+
+.middle-right-wrapper {
     display: flex;
     flex-direction: row;
+    /*! gap: rem; */
+}
+
+
+
+.insurance-nav > div {
+
     justify-content: space-between;
     align-items: flex-start;
-    /*! width: 100%; */
-    /*! padding: 2rem; */
-    /*! box-sizing: border-box; */
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
     gap: 1rem;
     min-height: 250px; /* Set a base height for equal alignment */
 
@@ -13,12 +27,20 @@
 
 
 .left{
-    width: 20%;
+    /*! width: 20%; */
 
 }
 
+.middle {
+    width: 50;
+
+    margin-left: 5em;
+}
+
 .right {
-    width: 10%;
+    /*! padding: 5em; */
+    /*! margin: 5em; */
+
 }
 
 
@@ -28,9 +50,9 @@
 
 
 .middle{
-    flex-grow: 1;
-    max-width: 50%;
-    box-sizing: border-box;
+    flex-grow: 5;
+    max-width: 80%;
+    /*! box-sizing: border-box; */
 
 }
 .container{
@@ -85,13 +107,6 @@
     border-style:solid;
     border-radius: 3em;
 }
-
-.sub-container{
-         display: none;
-        cursor: pointer;
-        border-radius: 3em;
-}
-
 .insurance a{
     color: #001935;
 }
@@ -102,11 +117,6 @@
     transition: 0.5s;
 }
 
-.sub-container{
-        display: none;
-        cursor: pointer;
-        border-radius: 3em;
-    }
 
 @media (max-width: 900px){
 
@@ -126,7 +136,7 @@
     }
 
     .sub-container{
-         display: none;
+         display: block;
         cursor: pointer;
         border-radius: 3em;
     }

@@ -27,52 +27,57 @@
                     <div class="left" id="{{ type }}">
                         <h3>{% trans type|title %}</h3>
                     </div>
-                <div class="space"></div>
+                
                 
     <!-- MIDDLE section -->
-                 <div class="middle">
-                    {% for insurance in insurances %}
-                        <div class="insurance-container" id="{{ insurance.slug }}" >
-                            <h2>
-                                {{ insurance.title }}
-                            </h2>
-                            <div class="container">
-                                <p>
-                                    {{ insurance.content|linebreaks|linebreaksbr|urlizetrunc:25}}
-                                    {% if user.is_staff %}
-                                        <a href="{% url 'edit-info' insurance.pk %}"><i class="bi bi-pencil-square"  id="insurance" ></i></a>
-                                        <a href="{% url 'delete-info' insurance.pk %}"><i class="bi bi-trash3"></i></a>
-                                    {% endif %}
-                                    {% if insurance.hidden_info %}
-                                        <span class="hiden-info">{{ insurance.hidden_info|linebreaks|linebreaksbr|urlizetrunc:25}}</span>
-                                        <button class="show-more">{% trans 'Show More' %}</button>
-                                        <button class="show-less">{% trans 'Show Less' %}</button>
-                                    {% endif %}
-                                </p>
+                <div class="middle-right-wrapper">
+                     <div class="middle">
+                        {% for insurance in insurances %}
+                            <div class="insurance-container" id="{{ insurance.slug }}" >
+                                <h2>
+                                    {{ insurance.title }}
+                                </h2>
+                                <div class="container">
+                                    <p>
+                                        {{ insurance.content|linebreaks|linebreaksbr|urlizetrunc:25}}
+                                        {% if user.is_staff %}
+                                            <a href="{% url 'edit-info' insurance.pk %}"><i class="bi bi-pencil-square"  id="insurance" ></i></a>
+                                            <a href="{% url 'delete-info' insurance.pk %}"><i class="bi bi-trash3"></i></a>
+                                        {% endif %}
+                                        {% if insurance.hidden_info %}
+                                            <span class="hiden-info">{{ insurance.hidden_info|linebreaks|linebreaksbr|urlizetrunc:25}}</span>
+                                            <button class="show-more">{% trans 'Show More' %}</button>
+                                            <button class="show-less">{% trans 'Show Less' %}</button>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            
                             </div>
                         
-                        </div>
-                    {% empty %}
-                        <div class="insurance-container" id="{{ type }}">
-                            <h3>{% trans 'Has no General Insurance Info' %}</h3>
-                        </div>
-
-                    {% endfor %}
-                 </div>
+                        {% empty %}
+                            <div class="insurance-container" id="{{ type }}">
+                                <h3>{% trans 'Has no General Insurance Info' %}</h3>
+                            </div>
+    
+                        {% endfor %}
+                     </div>
                 
     <!-- RIGHT section -->
-                <div class="right">
-                    <ul>
-                         {% for i in insurances %}
-                            
-                            <li class="insurance" data-info="{{ i.slug }}">{{ i.title }}</li>
-                            
-                        {% endfor %}
-                    </ul>
-                </div>        
+                    <div class="right">
+                        <ul>
+                             {% for i in insurances %}
+                                
+                                <li class="insurance" data-info="{{ i.slug }}">{{ i.title }}</li>
+                                
+                            {% endfor %}
+                        </ul>
+                    </div>        
+                    
+                </div>
                 </nav>
-            {% endfor %}
-        {% endif %}
+                {% endfor %}
+             
+            {% endif %}
         </section>
     </section>
 {% endblock %}
