@@ -85,6 +85,13 @@
     border-style:solid;
     border-radius: 3em;
 }
+
+.sub-container{
+         display: none;
+        cursor: pointer;
+        border-radius: 3em;
+}
+
 .insurance a{
     color: #001935;
 }
@@ -119,7 +126,7 @@
     }
 
     .sub-container{
-        display: none;
+         display: none;
         cursor: pointer;
         border-radius: 3em;
     }
