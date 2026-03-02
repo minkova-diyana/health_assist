@@ -14,7 +14,7 @@
             {% for under_package in company_packages %}
                 {% if under_package.packages.name == packages.packages.name %}
                     <div class="">
-                        <a href="{% url 'under-package' under_package.pk %}"><p>{{ under_package.name }}</p></a>
+                        <a href="{% url 'under-package' under_package.pk %}"><p>{{ under_package.name }}<span><i class="bi bi-arrow-bar-right"></i></span></p></a>
                      </div>
                 {% endif %}
             {% endfor %}

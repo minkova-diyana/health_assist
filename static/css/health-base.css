@@ -17,10 +17,20 @@ h1{
 .home{
     padding-top: 8%;
 }
-
-.col-md-2 p-3{
-    width: 150px;
+.head{
+    min-height: 30vh;
 }
+ img{
+    width:50%;
+
+}
+
+.p-3 a{
+    background:#ffffffab;
+    padding: 10px;
+    border-radius: 2em;
+}
+
 .reg-btn{
     border-radius: 2em;
     text-align: center;
@@ -33,4 +43,13 @@ h3{
 }
 h4{
     padding: 5px;
+}
+
+@media(max-width:900px){
+
+    img{
+    width:100%;
+
+}
+
 }

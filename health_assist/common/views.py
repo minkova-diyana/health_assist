@@ -33,6 +33,7 @@ class HealthHomeView(TemplateView):
         if self.request.user.is_authenticated and  not self.request.user.is_staff:
             profile = get_object_or_404(EmployeeProfile, user=self.request.user)
             context['profile'] = profile
+            context['company'] = profile.company
             return context
 
 
