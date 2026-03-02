@@ -15,7 +15,7 @@ class InsuredCompanies(models.Model):
     insurance_company_name = models.CharField(max_length=100, null=True, blank=True)
     contract_start_date = models.DateField()
     contract_end_date = models.DateField()
-
+    company_logo = models.ImageField(upload_to='company_logo', null=True, blank=True)
 
     def __str__(self):
         return self.name
