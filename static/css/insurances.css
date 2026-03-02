@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: right;
+
 }
 
 .middle-right-wrapper {
@@ -32,7 +32,7 @@
 }
 
 .middle {
-    width: 50;
+    width: 50em;
 
     margin-left: 5em;
 }
@@ -107,6 +107,13 @@
     border-style:solid;
     border-radius: 3em;
 }
+
+.sub-container{
+         display: none;
+        cursor: pointer;
+        border-radius: 3em;
+    }
+
 .insurance a{
     color: #001935;
 }
@@ -136,7 +143,7 @@
     }
 
     .sub-container{
-         display: block;
+         display: none;
         cursor: pointer;
         border-radius: 3em;
     }
