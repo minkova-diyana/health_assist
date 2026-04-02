@@ -106,6 +106,8 @@
     border-width: 0.2em;
     border-style:solid;
     border-radius: 3em;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .sub-container{
