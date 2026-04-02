@@ -155,8 +155,9 @@
         cursor: pointer;
         border-radius: 3em;
         border: none;
-        padding: 0;
+        padding: 15px;
         text-align: center;
+        margin: auto;
     }
 
     .insurance::after{
