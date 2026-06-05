@@ -23,12 +23,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-USE_S3 = os.getenv('USE_S3', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'healthnet.finance',
-    '127.0.0.1',
-    'localhost'
+ 'healthnet.finance', '127.0.0.1'
 ]
 
 # Application definition
@@ -109,7 +106,6 @@ DATABASES = {
         "PORT": os.getenv("PORT", config('PORT')),
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -149,27 +145,11 @@ USE_TZ = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-# ---------------------------------------------------
-# LOCAL STATIC + MEDIA (DEFAULT)
-# ---------------------------------------------------
-if not USE_S3:
+STATIC_URL = 'static/'
 
-    STATIC_URL = '/static/'
-    STATICFILES_DIRS = [BASE_DIR / 'static']
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = BASE_DIR / 'media'
-
-    STORAGES = {
-        "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage",
-        },
-        "staticfiles": {
-            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-        },
-    }
-
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
@@ -183,7 +163,8 @@ PARLER_LANGUAGES = {
     }
 }
 
-
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -207,21 +188,19 @@ cloudinary.config(
     api_key=os.getenv('API_KEY', config('API_KEY')),
     api_secret=os.getenv('API_SECRET', config('API_SECRET')),
 )
-# ---------------------------------------------------
-# AWS S3 STATIC + MEDIA (PRODUCTION)
-# ---------------------------------------------------
-if USE_S3:
 
-    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = 'hnfbg-bkt'
-    AWS_S3_CUSTOM_DOMAIN = '%s.s3.eu-north-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-    AWS_S3_FILE_OVERWRITE = False
-    STORAGES = {
-        'default': {
-            'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
-        },
-        'staticfiles': {
-            'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
-        },
-    }
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+
+AWS_STORAGE_BUCKET_NAME = 'hnfbg-bkt'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.eu-north-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
+
+STORAGES = {
+    'default': {
+        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
+    },
+    'staticfiles': {
+        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
+    },
+}
