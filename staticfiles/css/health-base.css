@@ -1,0 +1,60 @@
+@import "about.css";
+@import "./news.css";
+@import "./insurances.css";
+@import "./partners.css";
+@import "./contacts.css";
+@import "./form.css";
+@import "health-nav.css";
+@import "questions.css";
+
+body{
+    background-image: url(images/doctor-using-modern-computer.jpg);
+}
+h1{
+    color: #521b0f;
+    font-size: 50px;
+}
+.home{
+    padding-top: 8%;
+}
+.head{
+    min-height: 30vh;
+}
+ img{
+    width:50%;
+
+}
+
+.p-5{
+    padding-bottom: 250px;
+    padding-top: 250px;
+}
+
+.p-3 a{
+    background:#ffffffab;
+    padding: 10px;
+    border-radius: 2em;
+}
+
+.reg-btn{
+    border-radius: 2em;
+    text-align: center;
+    border: solid;
+    padding: 10px;
+    margin: 20px;
+}
+h3{
+    padding: 0;
+}
+h4{
+    padding: 5px;
+}
+
+@media(max-width:900px){
+
+    img{
+    width:100%;
+
+}
+
+}

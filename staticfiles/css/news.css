@@ -1,0 +1,99 @@
+
+h3{
+    font-size: 30px;
+}
+
+.wrapper {
+    padding: 0 10em;
+}
+
+.icons{
+    padding: 2em;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+.bi-newspaper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+main > section{
+    padding: 5em 0;
+}
+
+.text-form-container {
+    border-radius: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 3em;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 25px;
+    border-style: double;
+    width: 60%;
+}
+.text-form-container h2{
+    font-size: 2rem;
+    text-align: unset;
+    display: block;
+    padding-bottom: 30px;
+}
+.text-form-container p {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: unset;
+}
+
+
+@media screen and (max-width: 900px) {
+    .wrap-container {
+        margin: auto;
+        box-sizing: content-box;
+        
+    }
+    
+    h1{
+        font-size: 23px;
+        margin-top: 0;
+        display:block;
+        text-align: center;
+
+    }
+
+    .text-form-container{
+        border-width: 0.5em;
+         width: 90%;
+    }
+
+    .text-form-container h2{
+
+        font-size: 20px; 
+
+    }
+
+    .text-form-container p{
+        font-size: 15px;
+
+    }
+
+    .text-form-container p span{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrap-container {
+        grid-template-columns: 10fr;
+    }
+    .text-form-container{
+        display: flex;
+        border: double;
+        width: 90%;
+    }
+}

@@ -22,11 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
+USE_S3 = os.getenv('USE_S3', 'False') == 'True'
 
 ALLOWED_HOSTS = [
- 'healthnet.finance', '127.0.0.1'
+    'healthnet.finance',
+    '127.0.0.1',
+    'localhost'
 ]
 
 # Application definition
@@ -147,11 +149,27 @@ USE_TZ = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-STATIC_URL = 'static/'
+# ---------------------------------------------------
+# LOCAL STATIC + MEDIA (DEFAULT)
+# ---------------------------------------------------
+if not USE_S3:
 
-STATICFILES_DIRS = (
-    BASE_DIR / 'static',
-)
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [BASE_DIR / 'static']
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
@@ -165,8 +183,7 @@ PARLER_LANGUAGES = {
     }
 }
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -190,20 +207,36 @@ cloudinary.config(
     api_key=os.getenv('API_KEY', config('API_KEY')),
     api_secret=os.getenv('API_SECRET', config('API_SECRET')),
 )
+# ---------------------------------------------------
+# AWS S3 STATIC + MEDIA (PRODUCTION)
+# ---------------------------------------------------
+if USE_S3:
 
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
-AWS_STORAGE_BUCKET_NAME = 'hnfbg-bkt'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.eu-north-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-AWS_S3_FILE_OVERWRITE = False
+    AWS_STORAGE_BUCKET_NAME = 'hnfbg-bkt'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com"
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL = None
 
-STORAGES = {
-    'default': {
-        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
-    },
-    'staticfiles': {
-        'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
-    },
-}
+    AWS_LOCATION = "media"
 
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+    # ----------------------------------------
+    # FIX 2: correct storage separation
+    # ----------------------------------------
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "OPTIONS": {
+                "location": "media",
+            },
+        },
+        "staticfiles": {
+            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+        },
+    }
