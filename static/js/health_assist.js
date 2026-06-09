@@ -11,16 +11,10 @@ function showInfo(event){
 
     const clickedElement = event.target;
     const insuranceInfo = document.getElementById(clickedElement.getAttribute('data-info'))
-    insuranceInfo.style.display === 'block' ? 'none' : 'block';
+    insuranceInfo.style.display = 'block';
 
 }
-
-
-
 
 hInsuranceMenuElements.forEach((element) => {
     element.addEventListener('click', showInfo)
     });
-
-
-
