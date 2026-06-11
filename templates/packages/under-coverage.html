@@ -5,89 +5,87 @@
 
 {% block content %}
 
-<h1 class="p-5">{{ details.name }}</h1>
-
-<!-- =========================
-     LIMITS
-========================= -->
-<div>
-    <h4 class="insurance" data-info="limit">{% trans 'Limits' %}</h4>
-    <div class="sub-container" id="limit">
-        {{ details.limit|linebreaks }}
+    <h1 class="p-5">{{ details.name }}</h1>
+    
+    <!-- =========================
+         LIMITS
+    ========================= -->
+    <div>
+        <h4 class="insurance" data-info="limit">{% trans 'Limits' %}</h4>
+        <div class="sub-container" id="limit">
+            {{ details.limit|linebreaks }}
+        </div>
     </div>
-</div>
-
-<!-- =========================
-     COVERAGE
-========================= -->
-<div>
-    <h4 class="insurance" data-info="coverage">{% trans 'Coverage' %}</h4>
-    <div class="sub-container" id="coverage">
-        {{ details.coverage|linebreaks }}
+    
+    <!-- =========================
+         COVERAGE
+    ========================= -->
+    <div>
+        <h4 class="insurance" data-info="coverage">{% trans 'Coverage' %}</h4>
+        <div class="sub-container" id="coverage">
+            {{ details.coverage|linebreaks }}
+        </div>
     </div>
-</div>
-
-
-<!-- PROGRESS -->
-<div class="progress-section">
-    <h4 class="insurance">{% trans 'Documents progress' %}</h4>
-
-    <p>{{ uploaded_count }} / {{ required_count }} uploaded</p>
-
-    <div class="progress-bar">
-        <div class="progress-fill" style="width: {{ progress }}%"></div>
+    
+    
+    <!-- PROGRESS -->
+    <div class="progress-section">
+        <h4 class="insurance">{% trans 'Documents progress' %}</h4>
+    
+        <p>{{ uploaded_count }} / {{ required_count }} uploaded</p>
+    
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ progress }}%"></div>
+        </div>
     </div>
-</div>
-
-<hr>
-
-<h4 class="insurance">{% trans 'Documents needed' %}</h4>
-
-<!-- OPTIONAL: expose ONLY base API url -->
-<script>
-    window.uploadConfig = {
-        baseUrl: "/api/upload/{{ details.slug }}/"
-    };
-</script>
-
-<!-- DOCUMENT LIST -->
-{% for document in required_docs %}
-
-    <div class="doc-card">
-
-        <p><strong>{{ document.type_document }}</strong></p>
-
-        {% if document.id in uploaded_ids %}
-
-            {% with claim=uploaded_map|get_claim:document.id %}
-                <div class="uploaded-status">
-                    <span class="done">✔ Uploaded</span>
-
-                    {% if claim %}
-                        <small>File: {{ claim.file }}</small>
-                    {% endif %}
-                </div>
-            {% endwith %}
-
-        {% else %}
-
-            <form class="upload-form" data-doc="{{ document.id }}">
-
-                <input type="file" name="file" required>
-
-                <button type="submit" class="upload-btn">
-                    Upload
-                </button>
-
-            </form>
-
-        {% endif %}
-
-    </div>
-
-{% endfor %}
-
-<!-- LOAD JS -->
-<script src="{% static 'js/upload_documents.js' %}"></script>
+    
+    <hr>
+    
+    <h4 class="insurance">{% trans 'Documents needed' %}</h4>
+    
+    <!-- OPTIONAL: expose ONLY base API url -->
+    <script>
+        window.uploadConfig = {
+            baseUrl: "{% url 'upload_document_ajax' details.slug 0 %}"
+        };
+    </script>
+    
+    <!-- DOCUMENT LIST -->
+    {% for document in required_docs %}
+    
+        <div class="doc-card">
+    
+            <p><strong>{{ document.type_document }}</strong></p>
+    
+            {% if document.id in uploaded_ids %}
+    
+                {% with claim=uploaded_map|get_claim:document.id %}
+                    <div class="uploaded-status">
+                        <span class="done">✔ Uploaded</span>
+    
+                        {% if claim %}
+                            <small>File: {{ claim.file }}</small>
+                        {% endif %}
+                    </div>
+                {% endwith %}
+    
+            {% else %}
+    
+                <form class="upload-form" data-doc="{{ document.id }}">
+    
+                    <input type="file" name="file" required>
+    
+                    <button type="submit" class="upload-btn">
+                        Upload
+                    </button>
+    
+                </form>
+    
+            {% endif %}
+    
+        </div>
+    
+    {% endfor %}
+        
 
 {% endblock %}

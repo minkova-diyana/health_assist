@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData();
             formData.append("file", file);
 
-            const url = `${window.uploadConfig.baseUrl}${docId}/`;
-
+            const url = window.uploadConfig.baseUrl.replace("/0/", `/${docId}/`);
             try {
                 const response = await fetch(url, {
                     method: "POST",
