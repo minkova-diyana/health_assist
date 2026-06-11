@@ -155,6 +155,8 @@ class UploadClaimFileView(LoginRequiredMixin, CreateView):
 
         return JsonResponse({
             "success": True,
-            "document_name": document.type_document,
-            "document_id": document.id
+            "document": {
+                "id": document.id,
+                "name": document.type_document
+            }
         })

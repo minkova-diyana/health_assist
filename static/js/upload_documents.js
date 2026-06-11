@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData();
             formData.append("file", file);
 
-            const url = window.uploadConfig.baseUrl.replace("/0/", `/${docId}/`);
+            const url= window.uploadConfig.baseUrl.replace("0", docId);
             try {
                 const response = await fetch(url, {
                     method: "POST",
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const card = this.closest(".doc-card");
 
                     card.innerHTML = `
-                        <p><strong>${data.document.name}</strong></p>
+                        <p><strong>${data.name}</strong></p>
                         <span class="done">✔ Uploaded</span>
                         <small>Uploaded successfully</small>
                     `;
